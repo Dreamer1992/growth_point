@@ -1,0 +1,227 @@
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Rubik-Regular';
+  src: url('../fonts/rubik-regular/Rubik-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/rubik-regular/Rubik-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/rubik-regular/Rubik-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/rubik-regular/Rubik-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/rubik-regular/Rubik-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/rubik-regular/Rubik-Regular.otf') format('otf'),
+  url('../fonts/rubik-regular/Rubik-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rubik-Bold';
+  src: url('../fonts/rubik-bold/Rubik-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/rubik-bold/Rubik-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/rubik-bold/Rubik-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/rubik-bold/Rubik-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/rubik-bold/Rubik-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/rubik-bold/Rubik-Bold.otf') format('otf'),
+  url('../fonts/rubik-bold/Rubik-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Rubik-Regular', sans-serif;
+  padding-top: 18rem;
+  background: url("../img/header/header-bg.png") center top no-repeat;
+  color: #000;
+  font-size: 2rem;
+}
+
+.purple-color {
+  color: $purple-color;
+}
+
+.growth-point {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 18.2rem);
+}
+
+.primary_btn {
+  display: inline-block;
+  font-family: 'Rubik-Bold', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 19px 30px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background: #84bc38;
+  border-radius: 50px;
+  box-shadow: -7px 7px 0px 0px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.header {
+  .logo_img {
+    width: 100%;
+    max-width: 16rem;
+  }
+
+  .fixed-top {
+    top: 35px;
+  }
+
+  .navbar {
+    .nav-item {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+
+      .nav-link {
+        color: #000;
+        text-decoration: underline;
+        font-size: 1.8rem;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .phone {
+    display: flex;
+    align-items: center;
+
+    a {
+      font-size: 2.8rem;
+      color: #000;
+      margin-left: 1rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &_content {
+    .content_title {
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+
+      span {
+        &:first-child {
+          font-family: 'Rubik-Bold', sans-serif;
+          font-size: 4rem;
+          background: $green-color;
+        }
+
+        &:last-child {
+          font-size: 3.6rem;
+          background: $orange-color;
+        }
+      }
+    }
+
+    .content_description {
+      margin-top: 50px;
+      text-align: center;
+
+      p span {
+        font-style: italic;
+      }
+    }
+
+    .content_bullet {
+      text-align: center;
+
+      .bullet-item {
+        margin: 5.5rem 0 8rem;
+
+        &_separator {
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .content_button {
+      text-align: center;
+      margin-bottom: 10.5rem;
+    }
+  }
+}
+
+section {
+  margin: 8rem 0;
+
+  .separator {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 7rem;
+
+    span {
+      font-family: 'Rubik-Bold', sans-serif;
+    }
+  }
+
+  &.one {
+    .bullet {
+      text-align: center;
+
+      .bullet-item {
+        background: $purple-color;
+        height: 100%;
+
+        &_img {
+          margin-bottom: 3.5rem;
+        }
+
+        &_text {
+          span {
+            font-size: 2rem;
+          }
+
+          color: #fff;
+          max-width: 24rem;
+          margin: 0 auto;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .two-bullet {
+      text-align: center;
+
+      .bullet-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+        &_text {
+          font-size: 1.8rem;
+
+          p:last-child {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
