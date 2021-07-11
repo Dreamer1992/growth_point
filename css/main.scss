@@ -44,6 +44,10 @@ body {
   color: $green-color;
 }
 
+.light-green-color {
+  color: $light-green-color;
+}
+
 .blue-color {
   color: $blue-color;
 }
@@ -54,6 +58,10 @@ body {
 
 .purple-color {
   color: $purple-color;
+}
+
+.dark-purple-color {
+  color: $dark-purple-color;
 }
 
 .growth-point {
@@ -444,9 +452,128 @@ section {
 
   &.nine {
     h2 {
-      color: #fff;
-      background: $light-green-color;
+      &:nth-of-type(1) {
+        color: #fff;
+        background: $light-green-color;
+      }
     }
+
+    .acquaintance-item {
+      &_title {
+        font-family: 'Rubik-Bold', sans-serif;
+        font-size: 2.8rem;
+        margin-bottom: 5rem;
+      }
+
+      &_text p {
+        margin-bottom: 5rem;
+      }
+    }
+
+    .acquaintance_video {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .acquaintance_description {
+      margin: 7.5rem auto;
+      max-width: 74rem;
+      text-align: center;
+    }
+
+    .button {
+      text-align: center;
+    }
+  }
+
+  &.ten {
+    .carousels {
+      .carousel-left,
+      .carousel-right {
+        text-align: center;
+
+        .title {
+          font-family: 'Rubik-Bold', sans-serif;
+          color: #fff;
+          font-size: 3.2rem;
+        }
+
+        .description {
+          margin: 4rem 0;
+        }
+      }
+
+      .carousel-left {
+        .title {
+          background: $orange-color;
+
+        }
+      }
+
+      .carousel-right {
+        .title {
+          background: $blue-color;
+        }
+      }
+
+      .carousel-item_img img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &.eleven {
+    h2 {
+      max-width: 52rem;
+      margin: 0 auto 6rem;
+    }
+
+    .description {
+      max-width: 38rem;
+      margin: 0 auto;
+    }
+
+    .anna-info {
+      &_item {
+        &.avatar {
+          text-align: center;
+
+          span {
+            display: inline-block;
+            text-align: center;
+          }
+
+          .avatar-img {
+            margin: 3.2rem 0;
+
+            img {
+              border-radius: 50%;
+              box-shadow: 4px -4px 0 15px $purple-color;
+            }
+          }
+
+          .avatar-name {
+            font-family: 'Rubik-Bold', sans-serif;
+            font-size: 3.2rem;
+            color: $purple-color;
+            margin-bottom: 3rem;
+          }
+        }
+
+        &-text {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+
+  }
+
+  &.twelve {
+    padding-top: 8.5rem;
+    padding-bottom: 7.5rem;
   }
 }
 

@@ -38,4 +38,27 @@ $(document).ready(function () {
             }
         ]
     });
+
+    $('.section-ten_carousel-left, .section-ten_carousel-right').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.reviews-carousel_nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        asNavFor: '.reviews-carousel_for',
+        focusOnSelect: true
+    });
+
+    $('.reviews-carousel_for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.reviews-carousel_nav'
+    });
+
+
 });

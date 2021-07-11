@@ -35,6 +35,10 @@ body {
   color: #83af1e;
 }
 
+.light-green-color {
+  color: #84bc38;
+}
+
 .blue-color {
   color: #237bc5;
 }
@@ -45,6 +49,10 @@ body {
 
 .purple-color {
   color: #ce3982;
+}
+
+.dark-purple-color {
+  color: #84468c;
 }
 
 .growth-point {
@@ -361,12 +369,94 @@ section.eight .benefit-title {
 section.eight .benefit-separator {
   margin: 3.5rem 0;
 }
-section.nine h2 {
+section.nine h2:nth-of-type(1) {
   color: #fff;
   background: #84bc38;
+}
+section.nine .acquaintance-item_title {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 5rem;
+}
+section.nine .acquaintance-item_text p {
+  margin-bottom: 5rem;
+}
+section.nine .acquaintance_video {
+  text-align: center;
+}
+section.nine .acquaintance_video img {
+  max-width: 100%;
+}
+section.nine .acquaintance_description {
+  margin: 7.5rem auto;
+  max-width: 74rem;
+  text-align: center;
+}
+section.nine .button {
+  text-align: center;
+}
+section.ten .carousels .carousel-left,
+section.ten .carousels .carousel-right {
+  text-align: center;
+}
+section.ten .carousels .carousel-left .title,
+section.ten .carousels .carousel-right .title {
+  font-family: 'Rubik-Bold', sans-serif;
+  color: #fff;
+  font-size: 3.2rem;
+}
+section.ten .carousels .carousel-left .description,
+section.ten .carousels .carousel-right .description {
+  margin: 4rem 0;
+}
+section.ten .carousels .carousel-left .title {
+  background: #dc7728;
+}
+section.ten .carousels .carousel-right .title {
+  background: #237bc5;
+}
+section.ten .carousels .carousel-item_img img {
+  margin: 0 auto;
+}
+section.eleven h2 {
+  max-width: 52rem;
+  margin: 0 auto 6rem;
+}
+section.eleven .description {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+section.eleven .anna-info_item.avatar {
+  text-align: center;
+}
+section.eleven .anna-info_item.avatar span {
+  display: inline-block;
+  text-align: center;
+}
+section.eleven .anna-info_item.avatar .avatar-img {
+  margin: 3.2rem 0;
+}
+section.eleven .anna-info_item.avatar .avatar-img img {
+  border-radius: 50%;
+  -webkit-box-shadow: 4px -4px 0 15px #ce3982;
+          box-shadow: 4px -4px 0 15px #ce3982;
+}
+section.eleven .anna-info_item.avatar .avatar-name {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-size: 3.2rem;
+  color: #ce3982;
+  margin-bottom: 3rem;
+}
+section.eleven .anna-info_item-text {
+  margin-bottom: 5rem;
+}
+section.twelve {
+  padding-top: 8.5rem;
+  padding-bottom: 7.5rem;
 }
 
 .slick-prev:before, .slick-next:before {
   color: #ce3982;
 }
+
 /*# sourceMappingURL=main.css.map */
