@@ -31,6 +31,18 @@ body {
   font-size: 2rem;
 }
 
+.green-color {
+  color: #83af1e;
+}
+
+.blue-color {
+  color: #237bc5;
+}
+
+.orange-color {
+  color: #dc7728;
+}
+
 .purple-color {
   color: #ce3982;
 }
@@ -152,6 +164,26 @@ section h2 {
 section h2 span {
   font-family: 'Rubik-Bold', sans-serif;
 }
+section.bg {
+  position: relative;
+  margin: 0;
+}
+section.bg::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .21;
+  z-index: -1;
+}
+section.bg_1::after {
+  background: url("../img/common/section_bg_1.jpg");
+}
+section.bg_2::after {
+  background: url("../img/common/section_bg_2.jpg");
+}
 section.one .bullet {
   text-align: center;
 }
@@ -189,8 +221,152 @@ section.one .two-bullet .bullet-item {
 section.one .two-bullet .bullet-item_text {
   font-size: 1.8rem;
 }
-section.one .two-bullet .bullet-item_text p:last-child {
+section.one .two-bullet .bullet-item_text p:nth-child(2) {
   margin-top: 3rem;
 }
+section.two {
+  padding-top: 7rem;
+  padding-bottom: 9.5rem;
+}
+section.two .items {
+  margin-top: 9rem;
+}
+section.two .items .item {
+  text-align: center;
+}
+section.two .items .item-img img {
+  border: 14px solid;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 220px;
+}
+section.two .items .item-img img.border-color-blue {
+  border-color: #237bc5;
+}
+section.two .items .item-img img.border-color-purple {
+  border-color: #ce3982;
+}
+section.two .items .item-img img.border-color-green {
+  border-color: #83af1e;
+}
+section.two .items .item-img img.border-color-orange {
+  border-color: #dc7728;
+}
+section.two .items .item-title {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+section.two .items .item-text {
+  margin-top: 3rem;
+  margin-bottom: 8.5rem;
+}
+section.two .items .item-text p span {
+  display: block;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+section.two .description p {
+  max-width: 61.5rem;
+  text-align: center;
+  margin: auto;
+}
+section.three h2 {
+  margin-bottom: 3rem;
+}
+section.three .section-three-carousel {
+  margin: 8rem 0;
+}
+section.three .button {
+  text-align: center;
+  margin-top: 5.5rem;
+}
+section.three .carousel-item_img img {
+  margin: 0 auto;
+}
+section.four {
+  padding-top: 8.5rem;
+  padding-bottom: 7.5rem;
+}
+section.four h2 {
+  color: #fff;
+  background-color: #84468c;
+}
+section.four .section-four_table {
+  text-align: center;
+}
+section.four .section-four_table img {
+  max-width: 100%;
+}
+section.five .section-five_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 6rem;
+}
+section.five .section-five_text p {
+  max-width: 61rem;
+  text-align: center;
+  margin: 0 auto;
+}
+section.five .section-five_text p span {
+  text-decoration: underline;
+}
+section.five .section-five_text p:first-child {
+  margin-bottom: 3.5rem;
+}
+section.six {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+section.six p {
+  text-align: center;
+}
+section.seven .section-seven-carousel .carousel-item {
+  text-align: center;
+}
+section.seven .section-seven-carousel .carousel-item_img img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+section.seven .section-seven-carousel .carousel-item_separator {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+section.eight {
+  padding-top: 8.5rem;
+  padding-bottom: 7.5rem;
+}
+section.eight h2:nth-child(2) {
+  color: #fff;
+  background: #ce3982;
+  max-width: 62rem;
+  margin: 0 auto 4rem;
+}
+section.eight .benefit {
+  text-align: center;
+}
+section.eight .benefit-img {
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+}
+section.eight .benefit-title {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-size: 2.3rem;
+}
+section.eight .benefit-separator {
+  margin: 3.5rem 0;
+}
+section.nine h2 {
+  color: #fff;
+  background: #84bc38;
+}
 
+.slick-prev:before, .slick-next:before {
+  color: #ce3982;
+}
 /*# sourceMappingURL=main.css.map */
