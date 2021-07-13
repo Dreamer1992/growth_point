@@ -49,7 +49,16 @@ $(document).ready(function () {
         slidesToScroll: 1,
         centerMode: true,
         asNavFor: '.reviews-carousel_for',
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+        ]
     });
 
     $('.reviews-carousel_for').slick({
@@ -57,7 +66,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.reviews-carousel_nav'
+        asNavFor: '.reviews-carousel_nav',
     });
 
 

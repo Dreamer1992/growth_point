@@ -71,18 +71,23 @@ body {
   font-family: 'Rubik-Bold', sans-serif;
   text-transform: uppercase;
   color: #fff;
-  padding: 19px 30px;
-  font-size: 20px;
+  padding: 1.9rem 3rem;
+  font-size: 2rem;
   outline: none;
   border: none;
   background: #84bc38;
   border-radius: 50px;
-  -webkit-box-shadow: -7px 7px 0px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: -7px 7px 0px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -0.7rem 0.7rem 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: -0.7rem 0.7rem 0 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 .primary_btn:hover {
   cursor: pointer;
   color: #fff;
+}
+.primary_btn:active {
+  background: #83af1e;
 }
 .primary_btn:focus {
   outline: none;
@@ -331,8 +336,9 @@ section.six {
   padding-top: 5.5rem;
   padding-bottom: 5.5rem;
 }
-section.six p {
-  text-align: center;
+section.six h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0;
 }
 section.seven .section-seven-carousel .carousel-item {
   text-align: center;
@@ -454,6 +460,9 @@ section.twelve {
   padding-top: 8.5rem;
   padding-bottom: 7.5rem;
 }
+section.twelve .item-img img {
+  max-width: 100%;
+}
 section.fourteen {
   padding-top: 7.5rem;
   padding-bottom: 20rem;
@@ -526,6 +535,122 @@ section.seventeen .table-title {
   font-family: 'Rubik-Bold', sans-serif;
   font-size: 2.4rem;
   text-transform: uppercase;
+  text-align: center;
+}
+section.eighteen h2 {
+  margin-bottom: 2.5rem;
+}
+section.eighteen .description {
+  max-width: 42rem;
+  margin: auto;
+  text-align: center;
+}
+section.eighteen .info-item {
+  text-align: center;
+}
+section.eighteen .info-item.tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+section.eighteen .info-item.tel .info-item_tel {
+  font-size: 4rem;
+}
+section.eighteen .info-item.tel .info-item_desc {
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+section.eighteen .info-item.tel .info-item_soc {
+  display: inline-block;
+}
+section.eighteen .info-item.tel .info-item_soc a img {
+  width: 100%;
+  max-width: 5rem;
+}
+section.eighteen .info-item.tel .info-item_soc a:nth-child(2) {
+  margin: 0 2rem;
+}
+section.eighteen .info-item_img {
+  margin: 1rem auto 2.5rem;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 15.6rem;
+}
+section.eighteen .info-item_name {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+section.nineteen {
+  background: #f1f1f1;
+  padding: 4.2rem 0;
+}
+section.nineteen h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+section.nineteen .form {
+  width: 100%;
+  margin: auto;
+  max-width: 44rem;
+  text-align: center;
+}
+section.nineteen .form input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #9f9f9f;
+  background: #f1f1f1;
+  padding: 1.5rem 1rem;
+}
+section.nineteen .form input:first-child {
+  margin-bottom: 1.5rem;
+}
+section.nineteen .form input:focus-visible {
+  outline: none;
+}
+section.nineteen .form input::-webkit-input-placeholder {
+  font-style: italic;
+  color: #9f9f9f;
+  text-align: center;
+}
+section.nineteen .form input:-ms-input-placeholder {
+  font-style: italic;
+  color: #9f9f9f;
+  text-align: center;
+}
+section.nineteen .form input::-ms-input-placeholder {
+  font-style: italic;
+  color: #9f9f9f;
+  text-align: center;
+}
+section.nineteen .form input::placeholder {
+  font-style: italic;
+  color: #9f9f9f;
+  text-align: center;
+}
+section.nineteen .form button {
+  margin-top: 4rem;
+}
+
+.footer {
+  border-bottom: 2rem solid #84bc38;
+}
+.footer p {
+  margin: 5.5rem 0;
+  font-style: italic;
+  color: #4e4e4e;
   text-align: center;
 }
 

@@ -75,18 +75,22 @@ body {
   font-family: 'Rubik-Bold', sans-serif;
   text-transform: uppercase;
   color: #fff;
-  padding: 19px 30px;
-  font-size: 20px;
+  padding: 1.9rem 3rem;
+  font-size: 2rem;
   outline: none;
   border: none;
   background: $light-green-color;
   border-radius: 50px;
-  box-shadow: -7px 7px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: -.7rem .7rem 0 0 rgba(0, 0, 0, 0.1);
+  transition: all .2s ease;
 
   &:hover {
     cursor: pointer;
     color: #fff;
+  }
 
+  &:active {
+    background: $green-color;
   }
 
   &:focus {
@@ -396,8 +400,9 @@ section {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
 
-    p {
-      text-align: center;
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 0;
     }
   }
 
@@ -574,9 +579,14 @@ section {
   &.twelve {
     padding-top: 8.5rem;
     padding-bottom: 7.5rem;
+
+    .item-img img {
+      max-width: 100%;
+    }
   }
 
-  &.thirteen {}
+  &.thirteen {
+  }
 
   &.fourteen {
     padding-top: 7.5rem;
@@ -673,6 +683,124 @@ section {
       text-align: center;
     }
   }
+
+  &.eighteen {
+    h2 {
+      margin-bottom: 2.5rem;
+    }
+
+    .description {
+      max-width: 42rem;
+      margin: auto;
+      text-align: center;
+    }
+
+    .info-item {
+      text-align: center;
+
+      &.tel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .info-item_tel {
+          font-size: 4rem;
+        }
+
+        .info-item_desc {
+          margin-top: 4rem;
+          margin-bottom: 3.5rem;
+          font-size: 2.4rem;
+          text-transform: uppercase;
+        }
+
+        .info-item_soc {
+          display: inline-block;
+
+          a {
+            img {
+              width: 100%;
+              max-width: 5rem;
+            }
+
+            &:nth-child(2) {
+              margin: 0 2rem;
+            }
+          }
+        }
+      }
+
+      &_img {
+        margin: 1rem auto 2.5rem;
+        border-radius: 50%;
+        width: 100%;
+        max-width: 15.6rem;
+      }
+
+      &_name {
+        font-family: 'Rubik-Bold', sans-serif;
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &.nineteen {
+    background: #f1f1f1;
+    padding: 4.2rem 0;
+
+    h2 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .form {
+      width: 100%;
+      margin: auto;
+      max-width: 44rem;
+      text-align: center;
+
+      input {
+        width: 100%;
+        text-align: center;
+        border: none;
+        border-bottom: 2px solid #9f9f9f;
+        background: #f1f1f1;
+        padding: 1.5rem 1rem;
+
+        &:first-child {
+          margin-bottom: 1.5rem;
+        }
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        &::placeholder {
+          font-style: italic;
+          color: #9f9f9f;
+          text-align: center;
+        }
+      }
+
+      button {
+        margin-top: 4rem;
+      }
+    }
+  }
+}
+
+.footer {
+  p {
+    margin: 5.5rem 0;
+    font-style: italic;
+    color: #4e4e4e;
+    text-align: center;
+  }
+
+  border-bottom: 2rem solid $light-green-color;
 }
 
 .slick-prev:before, .slick-next:before {
