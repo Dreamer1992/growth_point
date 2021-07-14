@@ -34,8 +34,8 @@ html {
 
 body {
   font-family: 'Rubik-Regular', sans-serif;
-  padding-top: 18rem;
-  background: url("../img/header/header-bg.png") center top no-repeat;
+  padding-top: 27rem;
+  background: url("../img/header/header-bg.webp") center top no-repeat;
   color: #000;
   font-size: 2rem;
 }
@@ -144,15 +144,52 @@ body {
       text-transform: uppercase;
 
       span {
+        position: relative;
+
         &:first-child {
           font-family: 'Rubik-Bold', sans-serif;
           font-size: 4rem;
-          background: $green-color;
+          margin-bottom: 10px;
+          display: inline-block;
+
+          &::before {
+            content: '';
+            position: absolute;
+            background: url("../img/header/header_children.webp") no-repeat;
+            width: 39.2rem;
+            height: 8.5rem;
+            top: -8.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            background: $green-color;
+            top: -10px;
+            left: -50px;
+            width: calc(100% + 100px);
+            height: calc(100% + 20px);
+            transform: skew(-30deg, 0deg);
+            z-index: -1;
+          }
         }
 
         &:last-child {
           font-size: 3.6rem;
-          background: $orange-color;
+
+          &::after {
+            content: '';
+            position: absolute;
+            background: $orange-color;;
+            top: -5px;
+            left: -30px;
+            width: calc(100% + 60px);
+            height: calc(100% + 10px);
+            transform: skew(-30deg, 0deg);
+            z-index: -1;
+          }
         }
       }
     }
@@ -171,6 +208,10 @@ body {
 
       .bullet-item {
         margin: 5.5rem 0 8rem;
+
+        &_img img {
+          max-width: 100%;
+        }
 
         &_separator {
           margin-top: 2rem;
@@ -195,7 +236,7 @@ section {
   }
 
   h2 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 7rem;
 
@@ -221,23 +262,52 @@ section {
   }
 
   &.bg_1::after {
-    background: url("../img/common/section_bg_1.jpg");
+    background: url("../img/common/section_bg_1.webp");
   }
 
   &.bg_2::after {
-    background: url("../img/common/section_bg_2.jpg");
+    background: url("../img/common/section_bg_2.webp");
   }
 
   &.one {
+    h2 {
+      max-width: 84rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .bullet {
       text-align: center;
 
       .bullet-item {
-        background: $purple-color;
+        position: relative;
         height: 100%;
 
         &_img {
           margin-bottom: 3.5rem;
+
+          img {
+            max-width: 100%;
+
+            &.flower_1,
+            &.flower_2,
+            &.flower_3 {
+              position: absolute;
+              top: -50px;
+            }
+
+            &.flower_1 {
+              left: 0;
+            }
+
+            &.flower_2 {
+              right: 0;
+            }
+
+            &.flower_3 {
+              right: -70px;
+            }
+          }
         }
 
         &_text {
@@ -245,7 +315,7 @@ section {
             font-size: 2rem;
           }
 
-          color: #fff;
+          //color: #fff;
           max-width: 24rem;
           margin: 0 auto;
           font-size: 1.8rem;
@@ -338,6 +408,18 @@ section {
       margin-bottom: 3rem;
     }
 
+    p.description {
+      max-width: 70rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    p.description_bottom {
+      max-width: 73rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
     .section-three-carousel {
       margin: 8rem 0;
     }
@@ -363,6 +445,13 @@ section {
       background-color: $dark-purple-color;
     }
 
+    .table-top {
+      tbody th p {
+        font-family: 'Rubik-Bold', sans-serif;
+        font-size: 2.2rem;
+      }
+    }
+
     .section-four_table {
       text-align: center;
 
@@ -377,7 +466,12 @@ section {
       &_header {
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
         margin-bottom: 6rem;
+
+        img {
+          max-width: 100%;
+        }
       }
 
       &_text p {
@@ -397,8 +491,21 @@ section {
   }
 
   &.six {
+    margin-top: 14rem;
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      background: url("../img/section_six/children.webp");
+      width: 44.8rem;
+      height: 9.8rem;
+      position: absolute;
+      top: -9rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     h2 {
       font-size: 2.4rem;
@@ -407,6 +514,12 @@ section {
   }
 
   &.seven {
+    h2 {
+      max-width: 62rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .section-seven-carousel {
       .carousel-item {
         text-align: center;
@@ -476,10 +589,33 @@ section {
     }
 
     .acquaintance_video {
+      position: relative;
       text-align: center;
 
       img {
         max-width: 100%;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        background: url("../img/common/toys/gun.webp");
+        width: 32.6rem;
+        height: 32.8rem;
+        left: -32.6rem;
+      }
+
+      &::after {
+        background: url("../img/common/toys/car.webp");
+        width: 30.7rem;
+        height: 33.5rem;
+        right: -30.7rem;
       }
     }
 
@@ -543,6 +679,10 @@ section {
 
     .anna-info {
       &_item {
+        p, span {
+          line-height: 25px;
+        }
+
         &.avatar {
           text-align: center;
 
@@ -552,7 +692,7 @@ section {
           }
 
           .avatar-img {
-            margin: 3.2rem 0;
+            margin: 5rem 0;
 
             img {
               border-radius: 50%;
@@ -582,6 +722,21 @@ section {
 
     .item-img img {
       max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .item-name {
+      font-family: 'Rubik-Bold', sans-serif;
+      text-align: center;
+      margin: 3rem auto 0;
+    }
+
+    .reviews .reviews-carousel_for {
+      .comment {
+        max-width: 76rem;
+        margin: 5rem auto 4rem;
+        text-align: center;
+      }
     }
   }
 
