@@ -741,6 +741,99 @@ section {
   }
 
   &.thirteen {
+    h2.bottom-title {
+      margin-top: 7rem;
+      max-width: 90rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .table-price {
+      th p {
+        text-align: center;
+
+        &:first-of-type {
+          color: #838383;
+          text-decoration: line-through;
+          padding: 3rem;
+        }
+
+        &:last-of-type {
+          font-size: 2.6rem;
+          color: #bf3f7c;
+          font-family: 'Rubik-Bold', sans-serif;
+        }
+      }
+    }
+
+    .table-bottom {
+      position: relative;
+
+      table {
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 26.4rem;
+          height: 22.2rem;
+        }
+
+        &::before {
+          bottom: 0;
+          left: -26.4rem;
+          background: url("../img/common/toys/plane.webp");
+        }
+
+        &::after {
+          top: 0;
+          right: -26.4rem;
+          background: url("../img/common/toys/horse.webp");
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8.5rem;
+        left: 50%;
+        transform: translateX(calc(-50% + -40px));
+        background: url(../img/section_thirteen/children.webp);
+        width: 29.8rem;
+        height: 11rem;
+      }
+
+      .old-price {
+        color: #838383;
+        text-decoration: line-through;
+      }
+
+
+      tbody tr th {
+        &:first-of-type {
+          width: 50%;
+        }
+
+        &:last-of-type {
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .total_cost {
+      font-size: 3.2rem;
+      text-align: center;
+      margin-top: 12rem;
+      margin-bottom: 7rem;
+      line-height: 4.2rem;
+    }
+
+    .content_button {
+      margin: 3rem;
+      text-align: center;
+    }
   }
 
   &.fourteen {
@@ -772,13 +865,43 @@ section {
       margin: 5rem 0 4rem;
     }
 
-    .bullet p {
-      margin-bottom: 5rem;
+    .bullet {
+      position: relative;
 
-      span {
-        font-family: 'Rubik-Bold', sans-serif;
-        display: block;
-        margin-bottom: 1.5rem;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+      }
+
+      &::before {
+        background: url("../img/common/toys/plane.webp");
+        bottom: 0;
+        left: -26.4rem;
+        width: 26.4rem;
+        height: 22.2rem;
+      }
+
+      &::after {
+        background: url("../img/common/toys/horse.webp");
+        top: 0;
+        right: -26.4rem;
+        width: 26.4rem;
+        height: 22.2rem;
+      }
+
+      p {
+        margin-bottom: 5rem;
+
+        span {
+          font-family: 'Rubik-Bold', sans-serif;
+          display: block;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .number img {
+        max-width: 100%;
       }
     }
   }
@@ -790,9 +913,13 @@ section {
       padding-top: 7.5rem;
       padding-bottom: 7.5rem;
 
+      &::before,
       &::after {
         position: absolute;
         content: '';
+      }
+
+      &::after {
         top: 0;
         right: 0;
         bottom: 0;
@@ -800,10 +927,19 @@ section {
         opacity: .21;
         z-index: -1;
       }
+
+      &::before {
+        background: url("../img/section_sixteen/children.webp");
+        top: -6rem;
+        left: 50%;
+        width: 35.2rem;
+        height: 9.6rem;
+        transform: translateX(-50%);
+      }
     }
 
     .bg_1::after {
-      background: url("../img/common/section_bg_1.jpg");
+      background: url("../img/common/section_bg_1.webp");
     }
 
     h2 {
@@ -832,10 +968,62 @@ section {
     }
 
     .table-title {
+      position: relative;
       font-family: 'Rubik-Bold', sans-serif;
+      margin-bottom: 4rem;
       font-size: 2.4rem;
       text-transform: uppercase;
       text-align: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background: url("../img/common/toys/car.webp");
+        bottom: -16.85rem;
+        right: -30.7rem;
+        width: 30.7rem;
+        height: 33.5rem;
+      }
+    }
+
+    table {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+      }
+
+      &::before {
+        top: 50%;
+        transform: translateY(-50%);
+        left: -26.4rem;
+        background: url("../img/common/toys/horse.webp");
+        width: 26.4rem;
+        height: 22.2rem;
+      }
+
+      &::after {
+        bottom: 0;
+        right: -26.4rem;
+        background: url("../img/common/toys/plane.webp");
+        width: 26.4rem;
+        height: 22.2rem;
+      }
+
+      tbody tr th {
+        width: 33.33333%;
+        vertical-align: middle;
+
+        &.th-bg-red {
+          background-color: #edcdcd;
+        }
+
+        &.th-bg-green {
+          background-color: #dce9d5;
+        }
+      }
     }
   }
 
@@ -960,4 +1148,8 @@ section {
 
 .slick-prev:before, .slick-next:before {
   color: $purple-color;
+}
+
+.table-bordered td, .table-bordered th {
+  border-color: #181818;
 }
