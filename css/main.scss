@@ -634,6 +634,8 @@ section {
     .carousels {
       .carousel-left,
       .carousel-right {
+        width: calc(100% - 45px);
+        margin: auto;
         text-align: center;
 
         .title {
@@ -731,11 +733,34 @@ section {
       margin: 3rem auto 0;
     }
 
-    .reviews .reviews-carousel_for {
-      .comment {
-        max-width: 76rem;
-        margin: 5rem auto 4rem;
-        text-align: center;
+    .reviews {
+      .reviews-carousel_nav {
+        .item.slick-slide {
+          transition: all .2s ease;
+
+          &:focus-visible {
+            outline: none;
+          }
+
+          &:not(.slick-center) {
+            transform: scale(0.7);
+
+            .item-name {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      .reviews-carousel_for {
+        .comment {
+          max-width: 76rem;
+          margin: 5rem auto 4rem;
+          text-align: center;
+          padding: 2rem;
+          background: $purple-color;
+          color: #fff;
+        }
       }
     }
   }
@@ -763,6 +788,20 @@ section {
           color: #bf3f7c;
           font-family: 'Rubik-Bold', sans-serif;
         }
+      }
+    }
+
+    .table-top {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: -10.49rem;
+        bottom: 17rem;
+        background: url("../img/section_thirteen/children_table.webp");
+        width: 15.3rem;
+        height: 35.5rem;
       }
     }
 
@@ -947,6 +986,63 @@ section {
 
       span:last-child {
         font-family: 'Rubik-Regular', sans-serif;
+      }
+    }
+
+    #accordionQuestions {
+      max-width: 82rem;
+      margin: 4rem auto;
+
+      .card {
+        border: none;
+        margin-bottom: 2.7rem;
+
+        &-header {
+          padding: 0;
+          margin-bottom: 0;
+          background-color: transparent;
+          border-bottom: none;
+        }
+
+        &-body {
+          font-size: 1.6rem;
+          background-color: #fefcf7;
+          line-height: 2.6rem;
+          padding: 1.8rem 2.3rem;
+          margin-top: 2rem;
+          margin-left: 6.5rem;
+        }
+      }
+
+
+      button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        padding: 0;
+
+        &.collapsed img {
+          transform: rotate(0deg);
+        }
+
+        img {
+          width: 4.1rem;
+          height: 4.1rem;
+          transition: all .2s ease;
+          transform: rotate(180deg);
+        }
+
+        span {
+          font-family: 'Rubik-Bold', sans-serif;
+          font-size: 2rem;
+          white-space: normal;
+          margin-left: 2.4rem;
+          line-height: 2.4rem;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
       }
     }
   }
@@ -1147,7 +1243,16 @@ section {
 }
 
 .slick-prev:before, .slick-next:before {
-  color: $purple-color;
+  content: '';
+}
+
+button.slick-next img {
+  transform: rotate(180deg);
+}
+
+section.seven button.slick-prev,
+section.seven button.slick-next {
+  transform: translateY(calc(-50% - 75px));
 }
 
 .table-bordered td, .table-bordered th {

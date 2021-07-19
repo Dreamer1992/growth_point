@@ -522,6 +522,8 @@ section.nine .button {
 }
 section.ten .carousels .carousel-left,
 section.ten .carousels .carousel-right {
+  width: calc(100% - 45px);
+  margin: auto;
   text-align: center;
 }
 section.ten .carousels .carousel-left .title,
@@ -591,10 +593,27 @@ section.twelve .item-name {
   text-align: center;
   margin: 3rem auto 0;
 }
+section.twelve .reviews .reviews-carousel_nav .item.slick-slide {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+section.twelve .reviews .reviews-carousel_nav .item.slick-slide:focus-visible {
+  outline: none;
+}
+section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-name {
+  opacity: 0;
+}
 section.twelve .reviews .reviews-carousel_for .comment {
   max-width: 76rem;
   margin: 5rem auto 4rem;
   text-align: center;
+  padding: 2rem;
+  background: #ce3982;
+  color: #fff;
 }
 section.thirteen h2.bottom-title {
   margin-top: 7rem;
@@ -614,6 +633,18 @@ section.thirteen .table-price th p:last-of-type {
   font-size: 2.6rem;
   color: #bf3f7c;
   font-family: 'Rubik-Bold', sans-serif;
+}
+section.thirteen .table-top {
+  position: relative;
+}
+section.thirteen .table-top::after {
+  content: '';
+  position: absolute;
+  right: -10.49rem;
+  bottom: 17rem;
+  background: url("../img/section_thirteen/children_table.webp");
+  width: 15.3rem;
+  height: 35.5rem;
 }
 section.thirteen .table-bottom {
   position: relative;
@@ -760,6 +791,61 @@ section.sixteen h2 {
 }
 section.sixteen h2 span:last-child {
   font-family: 'Rubik-Regular', sans-serif;
+}
+section.sixteen #accordionQuestions {
+  max-width: 82rem;
+  margin: 4rem auto;
+}
+section.sixteen #accordionQuestions .card {
+  border: none;
+  margin-bottom: 2.7rem;
+}
+section.sixteen #accordionQuestions .card-header {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: none;
+}
+section.sixteen #accordionQuestions .card-body {
+  font-size: 1.6rem;
+  background-color: #fefcf7;
+  line-height: 2.6rem;
+  padding: 1.8rem 2.3rem;
+  margin-top: 2rem;
+  margin-left: 6.5rem;
+}
+section.sixteen #accordionQuestions button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  padding: 0;
+}
+section.sixteen #accordionQuestions button.collapsed img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+section.sixteen #accordionQuestions button img {
+  width: 4.1rem;
+  height: 4.1rem;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+section.sixteen #accordionQuestions button span {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-size: 2rem;
+  white-space: normal;
+  margin-left: 2.4rem;
+  line-height: 2.4rem;
+}
+section.sixteen #accordionQuestions button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 section.seventeen h2, section.seventeen .description {
   max-width: 72rem;
@@ -941,7 +1027,18 @@ section.nineteen .form button {
 }
 
 .slick-prev:before, .slick-next:before {
-  color: #ce3982;
+  content: '';
+}
+
+button.slick-next img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+section.seven button.slick-prev,
+section.seven button.slick-next {
+  -webkit-transform: translateY(calc(-50% - 75px));
+          transform: translateY(calc(-50% - 75px));
 }
 
 .table-bordered td, .table-bordered th {
