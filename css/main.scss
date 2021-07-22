@@ -332,6 +332,22 @@ section {
         justify-content: space-around;
         height: 100%;
 
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          &:first-child {
+            min-height: 26.4rem;
+          }
+        }
+
+        &_img img {
+          width: 100%;
+          max-width: 26.4rem;
+        }
+
         &_text {
           font-size: 1.8rem;
 
@@ -470,7 +486,8 @@ section {
         margin-bottom: 6rem;
 
         img {
-          max-width: 100%;
+          width: 100%;
+          max-width: 26.4rem;
         }
       }
 
@@ -605,17 +622,19 @@ section {
       }
 
       &::before {
-        background: url("../img/common/toys/gun.webp");
-        width: 32.6rem;
-        height: 32.8rem;
-        left: -32.6rem;
+        background: url("../img/common/toys/gun.png");
+        width: 32rem;
+        height: 32rem;
+        left: -32rem;
+        background-size: 32rem;
       }
 
       &::after {
-        background: url("../img/common/toys/car.webp");
-        width: 30.7rem;
-        height: 33.5rem;
-        right: -30.7rem;
+        background: url("../img/common/toys/car.png");
+        width: 32rem;
+        height: 32rem;
+        right: -32rem;
+        background-size: 32rem;
       }
     }
 
@@ -815,20 +834,22 @@ section {
         &::after {
           content: '';
           position: absolute;
-          width: 26.4rem;
-          height: 22.2rem;
+          width: 26rem;
+          height: 26rem;
+          background-size: 26rem;
         }
 
         &::before {
           bottom: 0;
-          left: -26.4rem;
-          background: url("../img/common/toys/plane.webp");
+          left: -27rem;
+          background-image: url("../img/common/toys/plane.png");
+
         }
 
         &::after {
           top: 0;
-          right: -26.4rem;
-          background: url("../img/common/toys/horse.webp");
+          right: -27rem;
+          background-image: url("../img/common/toys/horse.png");
         }
       }
 
@@ -911,22 +932,22 @@ section {
       &::after {
         content: '';
         position: absolute;
+        width: 26rem;
+        height: 26rem;
+        background-size: 26rem;
       }
 
       &::before {
-        background: url("../img/common/toys/plane.webp");
+        background-image: url("../img/common/toys/plane.png");
         bottom: 0;
-        left: -26.4rem;
-        width: 26.4rem;
-        height: 22.2rem;
+        left: -27rem;
+
       }
 
       &::after {
-        background: url("../img/common/toys/horse.webp");
+        background-image: url("../img/common/toys/horse.png");
         top: 0;
-        right: -26.4rem;
-        width: 26.4rem;
-        height: 22.2rem;
+        right: -27rem;
       }
 
       p {
@@ -1074,11 +1095,12 @@ section {
       &::after {
         content: '';
         position: absolute;
-        background: url("../img/common/toys/car.webp");
+        background-image: url("../img/common/toys/car.png");
+        background-size: 26rem;
         bottom: -16.85rem;
-        right: -30.7rem;
-        width: 30.7rem;
-        height: 33.5rem;
+        right: -30rem;
+        width: 26rem;
+        height: 26rem;
       }
     }
 
@@ -1089,23 +1111,23 @@ section {
       &::after {
         content: '';
         position: absolute;
+        width: 26rem;
+        height: 26rem;
+        background-size: 26rem;
       }
 
       &::before {
         top: 50%;
         transform: translateY(-50%);
-        left: -26.4rem;
-        background: url("../img/common/toys/horse.webp");
-        width: 26.4rem;
-        height: 22.2rem;
+        left: -27rem;
+        background-image: url("../img/common/toys/horse.png");
+
       }
 
       &::after {
         bottom: 0;
-        right: -26.4rem;
-        background: url("../img/common/toys/plane.webp");
-        width: 26.4rem;
-        height: 22.2rem;
+        right: -27rem;
+        background-image: url("../img/common/toys/plane.png");
       }
 
       tbody tr th {

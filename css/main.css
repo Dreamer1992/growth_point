@@ -292,6 +292,28 @@ section.one .two-bullet .bullet-item {
       justify-content: space-around;
   height: 100%;
 }
+section.one .two-bullet .bullet-item > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section.one .two-bullet .bullet-item > div:first-child {
+  min-height: 26.4rem;
+}
+section.one .two-bullet .bullet-item_img img {
+  width: 100%;
+  max-width: 26.4rem;
+}
 section.one .two-bullet .bullet-item_text {
   font-size: 1.8rem;
 }
@@ -400,7 +422,8 @@ section.five .section-five_header {
   margin-bottom: 6rem;
 }
 section.five .section-five_header img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 26.4rem;
 }
 section.five .section-five_text p {
   max-width: 61rem;
@@ -501,16 +524,18 @@ section.nine .acquaintance_video::before, section.nine .acquaintance_video::afte
           transform: translateY(-50%);
 }
 section.nine .acquaintance_video::before {
-  background: url("../img/common/toys/gun.webp");
-  width: 32.6rem;
-  height: 32.8rem;
-  left: -32.6rem;
+  background: url("../img/common/toys/gun.png");
+  width: 32rem;
+  height: 32rem;
+  left: -32rem;
+  background-size: 32rem;
 }
 section.nine .acquaintance_video::after {
-  background: url("../img/common/toys/car.webp");
-  width: 30.7rem;
-  height: 33.5rem;
-  right: -30.7rem;
+  background: url("../img/common/toys/car.png");
+  width: 32rem;
+  height: 32rem;
+  right: -32rem;
+  background-size: 32rem;
 }
 section.nine .acquaintance_description {
   margin: 7.5rem auto;
@@ -655,18 +680,19 @@ section.thirteen .table-bottom table {
 section.thirteen .table-bottom table::before, section.thirteen .table-bottom table::after {
   content: '';
   position: absolute;
-  width: 26.4rem;
-  height: 22.2rem;
+  width: 26rem;
+  height: 26rem;
+  background-size: 26rem;
 }
 section.thirteen .table-bottom table::before {
   bottom: 0;
-  left: -26.4rem;
-  background: url("../img/common/toys/plane.webp");
+  left: -27rem;
+  background-image: url("../img/common/toys/plane.png");
 }
 section.thirteen .table-bottom table::after {
   top: 0;
-  right: -26.4rem;
-  background: url("../img/common/toys/horse.webp");
+  right: -27rem;
+  background-image: url("../img/common/toys/horse.png");
 }
 section.thirteen .table-bottom::after {
   content: '';
@@ -730,20 +756,19 @@ section.fifteen .bullet {
 section.fifteen .bullet::before, section.fifteen .bullet::after {
   content: '';
   position: absolute;
+  width: 26rem;
+  height: 26rem;
+  background-size: 26rem;
 }
 section.fifteen .bullet::before {
-  background: url("../img/common/toys/plane.webp");
+  background-image: url("../img/common/toys/plane.png");
   bottom: 0;
-  left: -26.4rem;
-  width: 26.4rem;
-  height: 22.2rem;
+  left: -27rem;
 }
 section.fifteen .bullet::after {
-  background: url("../img/common/toys/horse.webp");
+  background-image: url("../img/common/toys/horse.png");
   top: 0;
-  right: -26.4rem;
-  width: 26.4rem;
-  height: 22.2rem;
+  right: -27rem;
 }
 section.fifteen .bullet p {
   margin-bottom: 5rem;
@@ -870,11 +895,12 @@ section.seventeen .table-title {
 section.seventeen .table-title::after {
   content: '';
   position: absolute;
-  background: url("../img/common/toys/car.webp");
+  background-image: url("../img/common/toys/car.png");
+  background-size: 26rem;
   bottom: -16.85rem;
-  right: -30.7rem;
-  width: 30.7rem;
-  height: 33.5rem;
+  right: -30rem;
+  width: 26rem;
+  height: 26rem;
 }
 section.seventeen table {
   position: relative;
@@ -882,22 +908,21 @@ section.seventeen table {
 section.seventeen table::before, section.seventeen table::after {
   content: '';
   position: absolute;
+  width: 26rem;
+  height: 26rem;
+  background-size: 26rem;
 }
 section.seventeen table::before {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: -26.4rem;
-  background: url("../img/common/toys/horse.webp");
-  width: 26.4rem;
-  height: 22.2rem;
+  left: -27rem;
+  background-image: url("../img/common/toys/horse.png");
 }
 section.seventeen table::after {
   bottom: 0;
-  right: -26.4rem;
-  background: url("../img/common/toys/plane.webp");
-  width: 26.4rem;
-  height: 22.2rem;
+  right: -27rem;
+  background-image: url("../img/common/toys/plane.png");
 }
 section.seventeen table tbody tr th {
   width: 33.33333%;
