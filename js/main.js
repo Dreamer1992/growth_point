@@ -43,11 +43,6 @@ $(document).ready(function () {
         ]
     });
 
-    // $('.section-ten_carousel-left, .section-ten_carousel-right').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    // });
-
     $('.section-ten_carousel-left').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -97,5 +92,36 @@ $(document).ready(function () {
         asNavFor: '.reviews-carousel_nav',
     });
 
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a[href^="#"]').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash;
+        $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 170
+        }, 1000, 'swing');
+    });
+
+    $('.video-play-btn').on('click', function () {
+        var video = $(this).siblings('video')[0];
+
+        if (video.paused || video.ended) {
+            $(this).addClass('pause');
+            video.load();
+            video.play();
+            video.removeAttribute('src');
+        } else {
+            $(this).removeClass('pause');
+            video.pause();
+            video.src = "";
+        }
+    });
 
 });
