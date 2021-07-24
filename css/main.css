@@ -118,8 +118,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.header .phone img {
+  max-width: 100%;
+  width: 2.3rem;
+}
 .header .phone a {
   font-size: 2.8rem;
+  white-space: nowrap;
   color: #000;
   margin-left: 1rem;
 }
@@ -390,6 +395,8 @@ section.three .button {
 }
 section.three .carousel-item_img img {
   margin: 0 auto;
+  max-width: 100%;
+  padding: 0 1rem;
 }
 section.four {
   padding-top: 8.5rem;
@@ -469,6 +476,51 @@ section.seven .section-seven-carousel .carousel-item_img img {
   max-width: 100%;
   margin: 0 auto;
 }
+section.seven .section-seven-carousel .carousel-item_video {
+  position: relative;
+  text-align: center;
+}
+section.seven .section-seven-carousel .carousel-item_video video {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+section.seven .section-seven-carousel .carousel-item_video .video-play-btn {
+  position: absolute;
+  background: red;
+  border-radius: 10px;
+  width: 6rem;
+  height: 4.2rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: .5;
+}
+section.seven .section-seven-carousel .carousel-item_video .video-play-btn:hover {
+  cursor: pointer;
+}
+section.seven .section-seven-carousel .carousel-item_video .video-play-btn.pause {
+  opacity: .2;
+}
+section.seven .section-seven-carousel .carousel-item_video .video-play-btn.pause::before {
+  border-style: double;
+  border-width: 0 0 0 20px;
+  border-color: #fff;
+  height: 20px;
+  left: calc(50%);
+}
+section.seven .section-seven-carousel .carousel-item_video .video-play-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 11px 0 11px 20px;
+  border-color: transparent transparent transparent #fff;
+}
 section.seven .section-seven-carousel .carousel-item_separator {
   margin-top: 4rem;
   margin-bottom: 3rem;
@@ -489,6 +541,7 @@ section.eight .benefit {
 section.eight .benefit-img {
   margin-top: 4.5rem;
   margin-bottom: 3.5rem;
+  min-height: 114px;
 }
 section.eight .benefit-title {
   font-family: 'Rubik-Bold', sans-serif;
@@ -522,20 +575,20 @@ section.nine .acquaintance_video::before, section.nine .acquaintance_video::afte
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  background-size: 13vw;
+  background-repeat: no-repeat;
+  width: 15vw;
+  max-width: 26rem;
+  height: 15vw;
+  max-height: 26rem;
 }
 section.nine .acquaintance_video::before {
-  background: url("../img/common/toys/gun.png");
-  width: 32rem;
-  height: 32rem;
-  left: -32rem;
-  background-size: 32rem;
+  background-image: url("../img/common/toys/gun.png");
+  left: -16vw;
 }
 section.nine .acquaintance_video::after {
-  background: url("../img/common/toys/car.png");
-  width: 32rem;
-  height: 32rem;
-  right: -32rem;
-  background-size: 32rem;
+  background-image: url("../img/common/toys/car.png");
+  right: -16vw;
 }
 section.nine .acquaintance_description {
   margin: 7.5rem auto;
@@ -556,6 +609,7 @@ section.ten .carousels .carousel-right .title {
   font-family: 'Rubik-Bold', sans-serif;
   color: #fff;
   font-size: 3.2rem;
+  min-height: 50px;
 }
 section.ten .carousels .carousel-left .description,
 section.ten .carousels .carousel-right .description {
@@ -569,6 +623,8 @@ section.ten .carousels .carousel-right .title {
 }
 section.ten .carousels .carousel-item_img img {
   margin: 0 auto;
+  max-width: 100%;
+  padding: 0 1rem;
 }
 section.eleven h2 {
   max-width: 52rem;
@@ -579,7 +635,7 @@ section.eleven .description {
   margin: 0 auto;
 }
 section.eleven .anna-info_item p, section.eleven .anna-info_item span {
-  line-height: 25px;
+  line-height: 2.5rem;
 }
 section.eleven .anna-info_item.avatar {
   text-align: center;
@@ -595,6 +651,7 @@ section.eleven .anna-info_item.avatar .avatar-img img {
   border-radius: 50%;
   -webkit-box-shadow: 4px -4px 0 15px #ce3982;
           box-shadow: 4px -4px 0 15px #ce3982;
+  max-width: 100%;
 }
 section.eleven .anna-info_item.avatar .avatar-name {
   font-family: 'Rubik-Bold', sans-serif;
@@ -609,9 +666,46 @@ section.twelve {
   padding-top: 8.5rem;
   padding-bottom: 7.5rem;
 }
-section.twelve .item-img img {
+section.twelve .item-video {
+  position: relative;
+  text-align: center;
+}
+section.twelve .item-video video {
   max-width: 100%;
   margin: 0 auto;
+}
+section.twelve .item-video .video-play-btn {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 3px solid #ce3982;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: .5;
+}
+section.twelve .item-video .video-play-btn:hover {
+  cursor: pointer;
+}
+section.twelve .item-video .video-play-btn.pause::before {
+  border-style: double;
+  border-width: 0 0 0 20px;
+  border-color: #ce3982;
+  height: 20px;
+  left: calc(50%);
+}
+section.twelve .item-video .video-play-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 11px 0 11px 20px;
+  border-color: transparent transparent transparent #ce3982;
 }
 section.twelve .item-name {
   font-family: 'Rubik-Bold', sans-serif;
@@ -628,6 +722,16 @@ section.twelve .reviews .reviews-carousel_nav .item.slick-slide:focus-visible {
 section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+  opacity: .5;
+}
+section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-video .video-play-btn {
+  border: 3px solid #fff;
+}
+section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-video .video-play-btn.pause::before {
+  border-color: #fff;
+}
+section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-video .video-play-btn::before {
+  border-color: transparent transparent transparent #fff;
 }
 section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-name {
   opacity: 0;
@@ -665,10 +769,13 @@ section.thirteen .table-top {
 section.thirteen .table-top::after {
   content: '';
   position: absolute;
-  right: -10.49rem;
-  bottom: 17rem;
-  background: url("../img/section_thirteen/children_table.webp");
-  width: 15.3rem;
+  right: -5.8vw;
+  bottom: 7vw;
+  background-image: url(../img/section_thirteen/children_table.webp);
+  background-size: 7vw;
+  background-repeat: no-repeat;
+  width: 8vw;
+  max-width: 15.3rem;
   height: 35.5rem;
 }
 section.thirteen .table-bottom {
@@ -680,30 +787,36 @@ section.thirteen .table-bottom table {
 section.thirteen .table-bottom table::before, section.thirteen .table-bottom table::after {
   content: '';
   position: absolute;
-  width: 26rem;
-  height: 26rem;
-  background-size: 26rem;
+  background-size: 13vw;
+  background-repeat: no-repeat;
+  bottom: -16.85rem;
+  width: 15vw;
+  max-width: 26rem;
+  height: 15vw;
+  max-height: 26rem;
 }
 section.thirteen .table-bottom table::before {
   bottom: 0;
-  left: -27rem;
+  left: -16vw;
   background-image: url("../img/common/toys/plane.png");
 }
 section.thirteen .table-bottom table::after {
   top: 0;
-  right: -27rem;
+  right: -16vw;
   background-image: url("../img/common/toys/horse.png");
 }
 section.thirteen .table-bottom::after {
   content: '';
   position: absolute;
-  bottom: -8.5rem;
+  bottom: -4.6vw;
   left: 50%;
-  -webkit-transform: translateX(calc(-50% + -40px));
-          transform: translateX(calc(-50% + -40px));
-  background: url(../img/section_thirteen/children.webp);
-  width: 29.8rem;
-  height: 11rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-image: url(../img/section_thirteen/children.webp);
+  width: 15.5vw;
+  height: 5.7vw;
+  background-repeat: no-repeat;
+  background-size: 13vw;
 }
 section.thirteen .table-bottom .old-price {
   color: #838383;
@@ -741,6 +854,9 @@ section.fourteen .description {
   margin: 0 auto 8.5rem;
   text-align: center;
 }
+section.fourteen img {
+  max-width: 100%;
+}
 section.fifteen h2 {
   max-width: 61rem;
   margin: auto;
@@ -756,19 +872,23 @@ section.fifteen .bullet {
 section.fifteen .bullet::before, section.fifteen .bullet::after {
   content: '';
   position: absolute;
-  width: 26rem;
-  height: 26rem;
-  background-size: 26rem;
+  background-size: 13vw;
+  background-repeat: no-repeat;
+  bottom: -16.85rem;
+  width: 15vw;
+  max-width: 26rem;
+  height: 15vw;
+  max-height: 26rem;
 }
 section.fifteen .bullet::before {
   background-image: url("../img/common/toys/plane.png");
   bottom: 0;
-  left: -27rem;
+  left: -16vw;
 }
 section.fifteen .bullet::after {
   background-image: url("../img/common/toys/horse.png");
   top: 0;
-  right: -27rem;
+  right: -16vw;
 }
 section.fifteen .bullet p {
   margin-bottom: 5rem;
@@ -896,11 +1016,14 @@ section.seventeen .table-title::after {
   content: '';
   position: absolute;
   background-image: url("../img/common/toys/car.png");
-  background-size: 26rem;
+  background-size: 13vw;
+  background-repeat: no-repeat;
   bottom: -16.85rem;
-  right: -30rem;
-  width: 26rem;
-  height: 26rem;
+  right: -16vw;
+  width: 15vw;
+  max-width: 26rem;
+  height: 15vw;
+  max-height: 26rem;
 }
 section.seventeen table {
   position: relative;
@@ -908,20 +1031,24 @@ section.seventeen table {
 section.seventeen table::before, section.seventeen table::after {
   content: '';
   position: absolute;
-  width: 26rem;
-  height: 26rem;
-  background-size: 26rem;
+  background-size: 13vw;
+  background-repeat: no-repeat;
+  right: -16vw;
+  width: 15vw;
+  max-width: 26rem;
+  height: 15vw;
+  max-height: 26rem;
 }
 section.seventeen table::before {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: -27rem;
+  left: -17vw;
   background-image: url("../img/common/toys/horse.png");
 }
 section.seventeen table::after {
   bottom: 0;
-  right: -27rem;
+  right: -17vw;
   background-image: url("../img/common/toys/plane.png");
 }
 section.seventeen table tbody tr th {
@@ -969,6 +1096,9 @@ section.eighteen .info-item.tel .info-item_desc {
 }
 section.eighteen .info-item.tel .info-item_soc {
   display: inline-block;
+}
+section.eighteen .info-item.tel .info-item_soc a:hover {
+  text-decoration: none;
 }
 section.eighteen .info-item.tel .info-item_soc a img {
   width: 100%;
@@ -1068,6 +1198,58 @@ section.seven button.slick-next {
 
 .table-bordered td, .table-bordered th {
   border-color: #181818;
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+
+  .header .phone a {
+    font-size: 2rem;
+  }
+  .header .navbar .nav-item {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+  .header .header_content .content_button {
+    margin-bottom: 2.5rem;
+  }
+
+  section.seven button.slick-prev,
+  section.seven button.slick-next {
+    -webkit-transform: translateY(calc(-50% - 55px));
+            transform: translateY(calc(-50% - 55px));
+  }
+  section.nine .acquaintance_video::before,
+  section.nine .acquaintance_video::after {
+    content: none;
+  }
+  section.thirteen .table-bottom table::before,
+  section.thirteen .table-bottom table::after {
+    content: none;
+  }
+  section.fifteen .bullet::before,
+  section.fifteen .bullet::after {
+    content: none;
+  }
+  section.seventeen .table-title::after {
+    content: none;
+  }
+  section.seventeen table::before,
+  section.seventeen table::after {
+    content: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+
+  section.five .section-five_header img:first-child,
+  section.five .section-five_header img:last-child {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
