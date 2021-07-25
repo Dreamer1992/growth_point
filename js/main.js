@@ -6,13 +6,13 @@ $(document).ready(function () {
         nextArrow: "<button type='button' class='slick-next pull-left'><img src='./img/common/arrow_purple.webp'></button>",
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -28,13 +28,13 @@ $(document).ready(function () {
         nextArrow: "<button type='button' class='slick-next pull-left'><img src='./img/common/arrow_purple.webp'></button>",
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -75,7 +75,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     arrows: false,
                     slidesToShow: 1
