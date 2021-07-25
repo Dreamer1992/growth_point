@@ -817,6 +817,10 @@ section {
       position: relative;
       text-align: center;
 
+      iframe {
+        max-width: 100%;
+      }
+
       video {
         max-width: 100%;
         margin: 0 auto;
@@ -1572,7 +1576,70 @@ section.seven button.slick-next {
   }
 
   .header .fixed-top {
-    top: 25px;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .1);
+    padding: 1rem 1.5rem;
+    z-index: 100;
+
+    .navbar-brand {
+      display: none;
+    }
+
+    .navbar-toggler {
+      display: flex;
+      align-items: center;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #525556;
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      -webkit-transition: background-color .2s ease;
+      -o-transition: background-color .2s ease;
+      transition: background-color .2s ease;
+      color: #fff;
+      padding: 7px 20px;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      span {
+        display: inline-block;
+
+        &:first-child {
+          position: relative;
+          line-height: 3.8rem;
+          letter-spacing: .05rem;
+          font-size: 13px;
+          font-family: 'Rubik-Bold', sans-serif;
+          margin-right: 15px
+        }
+
+        &.lines a {
+          display: block;
+          background-color: #fff;
+          width: 22px;
+          height: 2px;
+          margin-bottom: 7px;
+
+          &:last-child {
+            margin-bottom: 0;
+            width: 10px;
+          }
+        }
+      }
+    }
+
+    .navbar-collapse {
+      ul.navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: calc(100vh - 56px);
+      }
+    }
   }
 
   .header_content {
@@ -1677,6 +1744,20 @@ section.seven button.slick-next {
               color: #fff;
               font-family: 'Rubik-Bold', sans-serif;
               white-space: normal;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              &.collapsed {
+                svg {
+                  transform: rotate(0);
+                }
+              }
+
+              svg {
+                transition: all .2s ease;
+                transform: rotate(180deg);
+              }
             }
           }
         }
