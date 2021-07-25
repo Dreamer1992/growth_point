@@ -662,6 +662,9 @@ section.eleven .anna-info_item.avatar .avatar-name {
   color: #ce3982;
   margin-bottom: 3rem;
 }
+section.eleven .anna-info_item.avatar .icons a:hover {
+  text-decoration: none;
+}
 section.eleven .anna-info_item-text {
   margin-bottom: 5rem;
 }

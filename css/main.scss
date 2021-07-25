@@ -795,6 +795,10 @@ section {
             color: $purple-color;
             margin-bottom: 3rem;
           }
+
+          .icons a:hover {
+            text-decoration: none;
+          }
         }
 
         &-text {
