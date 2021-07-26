@@ -1225,39 +1225,38 @@ section.seven button.slick-next {
 
 .navbar-toggler .navbar-toggler-icon {
   position: relative;
-  width: 30px;
+  width: 26px;
   height: 2px;
-  background: #fff;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .navbar-toggler.collapsed .navbar-toggler-icon {
-  background: #000;
+  background: #fff;
 }
 
 .navbar-toggler .navbar-toggler-icon::before,
 .navbar-toggler .navbar-toggler-icon::after {
   content: '';
   position: absolute;
-  width: 30px;
+  width: 26px;
   height: 2px;
-  background: #000;
+  background: #fff;
   left: 0;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .navbar-toggler .navbar-toggler-icon::before {
   top: 0;
-  -webkit-transform: rotate(35deg);
-          transform: rotate(35deg);
+  -webkit-transform: rotate(220deg);
+          transform: rotate(220deg);
 }
 
 .navbar-toggler .navbar-toggler-icon::after {
   bottom: 0;
-  -webkit-transform: rotate(-35deg);
-          transform: rotate(-35deg);
+  -webkit-transform: rotate(-220deg);
+          transform: rotate(-220deg);
 }
 
 .navbar-toggler.collapsed .navbar-toggler-icon::before {
@@ -1272,9 +1271,8 @@ section.seven button.slick-next {
           transform: rotate(0deg);
 }
 
-.navbar-toggler.collapsed .navbar-toggler-icon::before,
-.navbar-toggler.collapsed .navbar-toggler-icon::after {
-  width: 30px;
+.navbar-toggler.collapsed .navbar-toggler-icon::before, .navbar-toggler.collapsed .navbar-toggler-icon::after {
+  width: 26px;
 }
 
 @media screen and (max-width: 992px) {
@@ -1365,27 +1363,22 @@ section.seven button.slick-next {
     font-family: 'Rubik-Bold', sans-serif;
     margin-right: 15px;
   }
-  .header .fixed-top .navbar-toggler span.lines a {
-    display: block;
-    background-color: #fff;
-    width: 22px;
-    height: 2px;
-    margin-bottom: 7px;
-  }
-  .header .fixed-top .navbar-toggler span.lines a:last-child {
-    margin-bottom: 0;
-    width: 10px;
-  }
   .header .fixed-top .navbar-collapse ul.navbar-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     height: calc(100vh - 56px);
+  }
+
+  .header .navbar .nav-item {
+    margin: 5rem 0 3rem;
+  }
+  .header .navbar .nav-item .nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
   }
 
   .header_content .content_title span:first-child::after {

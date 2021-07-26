@@ -94,18 +94,24 @@ $(document).ready(function () {
 
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
-        $(document).off("scroll");
 
         $('a[href^="#"]').each(function () {
             $(this).removeClass('active');
         })
         $(this).addClass('active');
 
+        var top = 170;
         var target = this.hash;
         $target = $(target);
 
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            top = 80;
+
+            $('.navbar-toggler').trigger('click')
+        }
+
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - 170
+            'scrollTop': $target.offset().top - top
         }, 1000, 'swing');
     });
 
