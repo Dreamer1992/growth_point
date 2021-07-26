@@ -807,7 +807,7 @@ section.thirteen .table-bottom table::before, section.thirteen .table-bottom tab
 section.thirteen .table-bottom table::before {
   bottom: 0;
   left: -16vw;
-  background-image: url("../img/common/toys/plane.png");
+  background-image: url("../img/common/toys/plane.webp");
 }
 section.thirteen .table-bottom table::after {
   top: 0;
@@ -890,7 +890,7 @@ section.fifteen .bullet::before, section.fifteen .bullet::after {
   max-height: 26rem;
 }
 section.fifteen .bullet::before {
-  background-image: url("../img/common/toys/plane.png");
+  background-image: url("../img/common/toys/plane.webp");
   bottom: 0;
   left: -16vw;
 }
@@ -1059,7 +1059,7 @@ section.seventeen table::before {
 section.seventeen table::after {
   bottom: 0;
   right: -17vw;
-  background-image: url("../img/common/toys/plane.png");
+  background-image: url("../img/common/toys/plane.webp");
 }
 section.seventeen table tbody tr th {
   width: 33.33333%;

@@ -112,7 +112,7 @@ $(document).ready(function () {
 
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top - top
-        }, 1000, 'swing');
+        }, 2000, 'swing');
     });
 
     $('.video-play-btn').on('click', function () {
