@@ -1326,7 +1326,15 @@ section {
         height: 100%;
 
         .info-item_tel {
-          font-size: 4rem;
+          a {
+            font-size: 4rem;
+            color: #000;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
         }
 
         .info-item_desc {

@@ -1095,8 +1095,13 @@ section.eighteen .info-item.tel {
           justify-content: center;
   height: 100%;
 }
-section.eighteen .info-item.tel .info-item_tel {
+section.eighteen .info-item.tel .info-item_tel a {
   font-size: 4rem;
+  color: #000;
+  text-decoration: none;
+}
+section.eighteen .info-item.tel .info-item_tel a:hover {
+  text-decoration: none;
 }
 section.eighteen .info-item.tel .info-item_desc {
   margin-top: 4rem;

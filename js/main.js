@@ -92,27 +92,31 @@ $(document).ready(function () {
         asNavFor: '.reviews-carousel_nav',
     });
 
-    $('a[href^="#"]').on('click', function (e) {
+    $('a[href^="#"]:not(.nav-link)').on('click', function (e) {
         e.preventDefault();
 
-        $('a[href^="#"]').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
+        var target = this.hash;
+        $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 170
+        }, 2500, 'swing');
+    });
+
+    $('a[href^="#nav_"]').on('click', function (e) {
+        e.preventDefault();
 
         var top = 170;
         var target = this.hash;
         $target = $(target);
 
         if (window.matchMedia("(max-width: 768px)").matches) {
-            top = 80;
-
             $('.navbar-toggler').trigger('click')
         }
 
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - top
-        }, 2000, 'swing');
+            'scrollTop': $target.offset().top - 80
+        }, 2500, 'swing');
     });
 
     $('.video-play-btn').on('click', function () {
