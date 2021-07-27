@@ -103,7 +103,7 @@ $message = '
 											   Телефон
 											</td>
 											<td style="color: #153643; font-family: sans-serif; font-size: 16px; line-height: 22px;">
-											   ' . $hone . '
+											   ' . $phone . '
 											</td>
 										</tr>
 										<!--/НАЧАЛО-->
