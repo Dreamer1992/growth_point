@@ -136,4 +136,18 @@ $(document).ready(function () {
 
     const observer = lozad(); // lazy loads elements with default selector as '.lozad'
     observer.observe();
+
+    $('.form').on('submit', function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: 'post',
+            url: '../email.php',
+            data: $('.form').serialize(),
+            success: function () {
+                alert('form was submitted');
+            }
+        });
+
+    });
 });

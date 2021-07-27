@@ -27,6 +27,7 @@ body {
   font-family: 'Rubik-Regular', sans-serif;
   padding-top: 27rem;
   background: url("../img/header/header-bg.webp") center top no-repeat;
+  background-size: contain;
   color: #000;
   font-size: 2rem;
 }
@@ -98,7 +99,12 @@ body {
   max-width: 16rem;
 }
 .header .fixed-top {
-  top: 35px;
+  top: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  z-index: 100;
 }
 .header .navbar .nav-item {
   padding-left: 1.5rem;
@@ -1328,12 +1334,7 @@ section.seven button.slick-next {
   }
 
   .header .fixed-top {
-    top: 0;
-    background: #fff;
-    -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
     padding: 1rem 1.5rem;
-    z-index: 100;
   }
   .header .fixed-top .navbar-brand {
     display: none;
@@ -1552,5 +1553,4 @@ section.seven button.slick-next {
     font-size: 3.5rem;
   }
 }
-
 /*# sourceMappingURL=main.css.map */
