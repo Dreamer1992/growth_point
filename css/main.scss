@@ -1424,7 +1424,12 @@ section {
       }
 
       button {
-        margin-top: 4rem;
+        margin-top: 3rem;
+      }
+
+      .form-error {
+        display: none;
+        color: #F24841;
       }
     }
   }

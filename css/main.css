@@ -1189,7 +1189,11 @@ section.nineteen .form input::placeholder {
   text-align: center;
 }
 section.nineteen .form button {
-  margin-top: 4rem;
+  margin-top: 3rem;
+}
+section.nineteen .form .form-error {
+  display: none;
+  color: #F24841;
 }
 
 .footer {
@@ -1553,4 +1557,5 @@ section.seven button.slick-next {
     font-size: 3.5rem;
   }
 }
+
 /*# sourceMappingURL=main.css.map */

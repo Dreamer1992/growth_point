@@ -140,12 +140,26 @@ $(document).ready(function () {
     $('.form').on('submit', function (e) {
         e.preventDefault();
 
+        var data = $('.form').serializeArray();
+        var isEmpty = false
+
+        $(data).each(function (idx, el) {
+            if (!el.value) {
+                isEmpty = true
+            }
+        })
+
+        if (isEmpty) {
+            $('.form-error').fadeIn(500).delay(2500).fadeOut(500)
+            return true
+        }
+
         $.ajax({
             type: 'post',
             url: '../email.php',
             data: $('.form').serialize(),
             success: function () {
-                alert('form was submitted');
+                alert('Спасибо. Форма была отправлена');
             }
         });
 
