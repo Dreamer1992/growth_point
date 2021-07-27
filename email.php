@@ -1,6 +1,5 @@
 <?php
-//$to = "<dobro@anotr.ru>";
-$to = "<Ganiev.Davlet@yandex.ru>";
+$to = "<dobro@anotr.ru>";
 
 $subject = "Точка роста";
 
