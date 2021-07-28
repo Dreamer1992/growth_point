@@ -99,6 +99,7 @@ body {
 .header .logo_img {
   width: 100%;
   max-width: 16rem;
+  height: auto;
 }
 .header .fixed-top {
   top: 0;
@@ -129,6 +130,7 @@ body {
 .header .phone img {
   max-width: 100%;
   width: 2.3rem;
+  height: auto;
 }
 .header .phone a {
   font-size: 2.8rem;
@@ -209,6 +211,7 @@ body {
 }
 .header_content .content_bullet .bullet-item_img img {
   max-width: 100%;
+  height: auto;
 }
 .header_content .content_bullet .bullet-item_separator {
   margin-top: 2rem;
@@ -271,6 +274,7 @@ section.one .bullet .bullet-item_img {
 }
 section.one .bullet .bullet-item_img img {
   max-width: 100%;
+  height: auto;
 }
 section.one .bullet .bullet-item_img img.flower_1, section.one .bullet .bullet-item_img img.flower_2, section.one .bullet .bullet-item_img img.flower_3 {
   position: absolute;
@@ -329,6 +333,7 @@ section.one .two-bullet .bullet-item > div:first-child {
 section.one .two-bullet .bullet-item_img img {
   width: 100%;
   max-width: 26.4rem;
+  height: auto;
 }
 section.one .two-bullet .bullet-item_text {
   font-size: 1.8rem;
@@ -408,6 +413,7 @@ section.three .carousel-item_img img {
   margin: 0 auto;
   max-width: 100%;
   padding: 0 1rem;
+  height: auto;
 }
 section.four {
   padding-top: 8.5rem;
@@ -442,6 +448,7 @@ section.five .section-five_header {
 section.five .section-five_header img {
   width: 100%;
   max-width: 26.4rem;
+  height: auto;
 }
 section.five .section-five_text p {
   max-width: 61rem;
@@ -555,6 +562,10 @@ section.eight .benefit-img {
   margin-bottom: 3.5rem;
   min-height: 114px;
 }
+section.eight .benefit-img img {
+  max-width: 100%;
+  height: auto;
+}
 section.eight .benefit-title {
   font-family: 'Rubik-Bold', sans-serif;
   font-size: 2.3rem;
@@ -580,6 +591,7 @@ section.nine .acquaintance_video {
 }
 section.nine .acquaintance_video img {
   max-width: 100%;
+  height: auto;
 }
 section.nine .acquaintance_video::before, section.nine .acquaintance_video::after {
   content: '';
@@ -637,6 +649,7 @@ section.ten .carousels .carousel-item_img img {
   margin: 0 auto;
   max-width: 100%;
   padding: 0 1rem;
+  height: auto;
 }
 section.eleven h2 {
   max-width: 52rem;
@@ -664,6 +677,7 @@ section.eleven .anna-info_item.avatar .avatar-img img {
   -webkit-box-shadow: 4px -4px 0 15px #ce3982;
           box-shadow: 4px -4px 0 15px #ce3982;
   max-width: 100%;
+  height: auto;
 }
 section.eleven .anna-info_item.avatar .avatar-name {
   font-family: 'Rubik-Bold', sans-serif;
@@ -673,6 +687,10 @@ section.eleven .anna-info_item.avatar .avatar-name {
 }
 section.eleven .anna-info_item.avatar .icons a:hover {
   text-decoration: none;
+}
+section.eleven .anna-info_item.avatar .icons a img {
+  max-width: 100%;
+  height: auto;
 }
 section.eleven .anna-info_item-text {
   margin-bottom: 5rem;
@@ -874,6 +892,7 @@ section.fourteen .description {
 }
 section.fourteen img {
   max-width: 100%;
+  height: auto;
 }
 section.fifteen h2 {
   max-width: 61rem;
@@ -883,6 +902,10 @@ section.fifteen h2 {
 section.fifteen .fifteen-img {
   text-align: center;
   margin: 5rem 0 4rem;
+}
+section.fifteen .fifteen-img img {
+  max-width: 100%;
+  height: auto;
 }
 section.fifteen .bullet {
   position: relative;
@@ -1127,6 +1150,7 @@ section.eighteen .info-item.tel .info-item_soc a:hover {
 section.eighteen .info-item.tel .info-item_soc a img {
   width: 100%;
   max-width: 5rem;
+  height: auto;
 }
 section.eighteen .info-item.tel .info-item_soc a:nth-child(2) {
   margin: 0 2rem;
@@ -1135,6 +1159,10 @@ section.eighteen .info-item_img {
   margin: 1rem auto 2.5rem;
   border-radius: 50%;
   width: 100%;
+}
+section.eighteen .info-item_img img {
+  max-width: 100%;
+  height: auto;
 }
 section.eighteen .info-item_name {
   font-family: 'Rubik-Bold', sans-serif;
@@ -1215,6 +1243,7 @@ section.nineteen .form .form-error {
 .slick-prev img,
 .slick-next img {
   width: 2.3rem;
+  height: auto;
 }
 .slick-prev:before, .slick-prev:before,
 .slick-next:before,

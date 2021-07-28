@@ -105,6 +105,7 @@ body {
   .logo_img {
     width: 100%;
     max-width: 16rem;
+    height: auto;
   }
 
   .fixed-top {
@@ -136,6 +137,7 @@ body {
     img {
       max-width: 100%;
       width: 2.3rem;
+      height: auto;
     }
 
     a {
@@ -227,6 +229,7 @@ body {
 
         &_img img {
           max-width: 100%;
+          height: auto;
         }
 
         &_separator {
@@ -304,6 +307,7 @@ section {
 
           img {
             max-width: 100%;
+            height: auto;
 
             &.flower_1,
             &.flower_2,
@@ -331,7 +335,6 @@ section {
             font-size: 2rem;
           }
 
-          //color: #fff;
           max-width: 24rem;
           margin: 0 auto;
           font-size: 1.8rem;
@@ -362,6 +365,7 @@ section {
         &_img img {
           width: 100%;
           max-width: 26.4rem;
+          height: auto;
         }
 
         &_text {
@@ -466,6 +470,7 @@ section {
         margin: 0 auto;
         max-width: 100%;
         padding: 0 1rem;
+        height: auto;
       }
     }
   }
@@ -506,6 +511,7 @@ section {
         img {
           width: 100%;
           max-width: 26.4rem;
+          height: auto;
         }
       }
 
@@ -643,6 +649,11 @@ section {
         margin-top: 4.5rem;
         margin-bottom: 3.5rem;
         min-height: 114px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
       }
 
       &-title {
@@ -682,6 +693,7 @@ section {
 
       img {
         max-width: 100%;
+        height: auto;
       }
 
       &::before,
@@ -758,6 +770,7 @@ section {
         margin: 0 auto;
         max-width: 100%;
         padding: 0 1rem;
+        height: auto;
       }
     }
   }
@@ -794,6 +807,7 @@ section {
               border-radius: 50%;
               box-shadow: 4px -4px 0 15px $purple-color;
               max-width: 100%;
+              height: auto;
             }
           }
 
@@ -804,8 +818,15 @@ section {
             margin-bottom: 3rem;
           }
 
-          .icons a:hover {
-            text-decoration: none;
+          .icons a {
+            &:hover {
+              text-decoration: none;
+            }
+
+            img {
+              max-width: 100%;
+              height: auto;
+            }
           }
         }
 
@@ -1066,6 +1087,7 @@ section {
 
     img {
       max-width: 100%;
+      height: auto;
     }
   }
 
@@ -1079,6 +1101,11 @@ section {
     .fifteen-img {
       text-align: center;
       margin: 5rem 0 4rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     .bullet {
@@ -1363,6 +1390,7 @@ section {
             img {
               width: 100%;
               max-width: 5rem;
+              height: auto;
             }
 
             &:nth-child(2) {
@@ -1376,6 +1404,11 @@ section {
         margin: 1rem auto 2.5rem;
         border-radius: 50%;
         width: 100%;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
       }
 
       &_name {
@@ -1456,6 +1489,7 @@ section {
 .slick-next {
   img {
     width: 2.3rem;
+    height: auto;
   }
 
   &:before,

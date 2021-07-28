@@ -2,8 +2,8 @@ $(document).ready(function () {
     $('.section-three-carousel').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/common/arrow_purple.webp'></button>",
-        nextArrow: "<button type='button' class='slick-next pull-left'><img src='./img/common/arrow_purple.webp'></button>",
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
+        nextArrow: "<button type='button' class='slick-next pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
         responsive: [
             {
                 breakpoint: 768,
@@ -24,8 +24,8 @@ $(document).ready(function () {
     $('.section-seven-carousel').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/common/arrow_purple.webp'></button>",
-        nextArrow: "<button type='button' class='slick-next pull-left'><img src='./img/common/arrow_purple.webp'></button>",
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
+        nextArrow: "<button type='button' class='slick-next pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
         responsive: [
             {
                 breakpoint: 768,
@@ -62,8 +62,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: '60px',
-        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/common/arrow_purple.webp'></button>",
-        nextArrow: "<button type='button' class='slick-next pull-left'><img src='./img/common/arrow_purple.webp'></button>",
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
+        nextArrow: "<button type='button' class='slick-next pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
         asNavFor: '.reviews-carousel_for',
         focusOnSelect: true,
         responsive: [
@@ -165,3 +165,5 @@ $(document).ready(function () {
 
     });
 });
+
+// document.addEventListener('touchstart', onTouchStart, {passive: true});
