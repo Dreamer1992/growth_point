@@ -8,6 +8,7 @@
 
 @font-face {
   font-family: 'Rubik-Regular';
+  font-display: swap;
   src: url('../fonts/rubik-regular/Rubik-Regular.eot'); /* IE9 Compat Modes */
   src: url('../fonts/rubik-regular/Rubik-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
   url('../fonts/rubik-regular/Rubik-Regular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -19,6 +20,7 @@
 
 @font-face {
   font-family: 'Rubik-Bold';
+  font-display: swap;
   src: url('../fonts/rubik-bold/Rubik-Bold.eot'); /* IE9 Compat Modes */
   src: url('../fonts/rubik-bold/Rubik-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
   url('../fonts/rubik-bold/Rubik-Bold.woff2') format('woff2'), /* Super Modern Browsers */
@@ -33,7 +35,7 @@ html {
 }
 
 body {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik-Regular', Helvetica, sans-serif;
   padding-top: 27rem;
   background: url("../img/header/header-bg.webp") center top no-repeat;
   background-size: contain;

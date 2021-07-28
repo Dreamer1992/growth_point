@@ -7,6 +7,7 @@
 
 @font-face {
   font-family: 'Rubik-Regular';
+  font-display: swap;
   src: url("../fonts/rubik-regular/Rubik-Regular.eot");
   /* IE9 Compat Modes */
   src: url("../fonts/rubik-regular/Rubik-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/rubik-regular/Rubik-Regular.woff2") format("woff2"), url("../fonts/rubik-regular/Rubik-Regular.woff") format("woff"), url("../fonts/rubik-regular/Rubik-Regular.ttf") format("truetype"), url("../fonts/rubik-regular/Rubik-Regular.otf") format("otf"), url("../fonts/rubik-regular/Rubik-Regular.svg#svgFontName") format("svg");
@@ -14,6 +15,7 @@
 }
 @font-face {
   font-family: 'Rubik-Bold';
+  font-display: swap;
   src: url("../fonts/rubik-bold/Rubik-Bold.eot");
   /* IE9 Compat Modes */
   src: url("../fonts/rubik-bold/Rubik-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/rubik-bold/Rubik-Bold.woff2") format("woff2"), url("../fonts/rubik-bold/Rubik-Bold.woff") format("woff"), url("../fonts/rubik-bold/Rubik-Bold.ttf") format("truetype"), url("../fonts/rubik-bold/Rubik-Bold.otf") format("otf"), url("../fonts/rubik-bold/Rubik-Bold.svg#svgFontName") format("svg");
@@ -24,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik-Regular', Helvetica, sans-serif;
   padding-top: 27rem;
   background: url("../img/header/header-bg.webp") center top no-repeat;
   background-size: contain;
