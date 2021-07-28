@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://chastnyj-detskij-sad-stavropol.ru/sitemap.xml
+
+User-agent: Yandex
+Allow: /
+Host: https://chastnyj-detskij-sad-stavropol.ru/
+Sitemap: https://chastnyj-detskij-sad-stavropol.ru/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Sitemap: https://chastnyj-detskij-sad-stavropol.ru/sitemap.xml
