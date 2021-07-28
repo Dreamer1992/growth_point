@@ -675,6 +675,11 @@ section {
       }
     }
 
+    .acquaintance img {
+      max-width: 100%;
+      height: auto;
+    }
+
     .acquaintance-item {
       &_title {
         font-family: 'Rubik-Bold', sans-serif;

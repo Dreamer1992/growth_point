@@ -577,6 +577,10 @@ section.nine h2:nth-of-type(1) {
   color: #fff;
   background: #84bc38;
 }
+section.nine .acquaintance img {
+  max-width: 100%;
+  height: auto;
+}
 section.nine .acquaintance-item_title {
   font-family: 'Rubik-Bold', sans-serif;
   font-size: 2.8rem;

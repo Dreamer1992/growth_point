@@ -46,15 +46,15 @@ $(document).ready(function () {
     $('.section-ten_carousel-left').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/common/arrow_orange.webp'></button>",
-        nextArrow: "<button type='button' class='slick-next pull-left'><img src='./img/common/arrow_orange.webp'></button>",
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img width='23' height='33' src='./img/common/arrow_orange.webp'></button>",
+        nextArrow: "<button type='button' class='slick-next pull-left'><img width='23' height='33' src='./img/common/arrow_orange.webp'></button>",
     });
 
     $('.section-ten_carousel-right').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: "<button type='button' class='slick-prev pull-left'><img src='./img/common/arrow_blue.webp'></button>",
-        nextArrow: "<button type='button' class='slick-next pull-left'><img src='./img/common/arrow_blue.webp'></button>",
+        prevArrow: "<button type='button' class='slick-prev pull-left'><img width='23' height='33' src='./img/common/arrow_blue.webp'></button>",
+        nextArrow: "<button type='button' class='slick-next pull-left'><img width='23' height='33' src='./img/common/arrow_blue.webp'></button>",
     });
 
     $('.reviews-carousel_nav').slick({
