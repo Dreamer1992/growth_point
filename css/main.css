@@ -146,17 +146,15 @@ body {
   color: #fff;
   text-transform: uppercase;
 }
-.header_content .content_title span {
+.header_content .content_title h1 {
   position: relative;
-}
-.header_content .content_title span:first-child {
   font-family: 'Rubik-Bold', sans-serif;
   font-size: 4rem;
   margin-bottom: 10px;
   display: inline-block;
   padding: 1rem 2rem;
 }
-.header_content .content_title span:first-child::before {
+.header_content .content_title h1::before {
   content: '';
   position: absolute;
   background: url("../img/header/header_children.webp") no-repeat;
@@ -168,7 +166,7 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.header_content .content_title span:first-child::after {
+.header_content .content_title h1::after {
   content: '';
   position: absolute;
   background: #83af1e;
@@ -179,6 +177,9 @@ body {
   -webkit-transform: skew(-30deg, 0deg);
           transform: skew(-30deg, 0deg);
   z-index: -1;
+}
+.header_content .content_title span {
+  position: relative;
 }
 .header_content .content_title span:last-child {
   font-size: 3.6rem;
@@ -1427,7 +1428,7 @@ section.seven button.slick-next {
     text-transform: uppercase;
   }
 
-  .header_content .content_title span:first-child::after {
+  .header_content .content_title h1::after {
     top: 0;
     left: 0;
     width: 100%;
@@ -1435,7 +1436,7 @@ section.seven button.slick-next {
     -webkit-transform: skew(-18deg, 0deg);
             transform: skew(-18deg, 0deg);
   }
-  .header_content .content_title span:first-child::before {
+  .header_content .content_title h1::before {
     top: -7.5rem;
   }
   .header_content .content_title span:last-child::after {
@@ -1579,6 +1580,10 @@ section.seven button.slick-next {
   section.fourteen img {
     max-width: 60%;
   }
+  section.seventeen table {
+    position: relative;
+    font-size: 1.5rem;
+  }
   section.eighteen .info-item.tel .info-item_desc {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -1588,7 +1593,7 @@ section.seven button.slick-next {
   }
 }
 @media screen and (max-width: 480px) {
-  .header_content .content_title span:first-child {
+  .header_content .content_title h1 {
     font-size: 3.5rem;
   }
 }
