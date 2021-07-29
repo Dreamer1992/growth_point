@@ -60,12 +60,13 @@ $(document).ready(function () {
     $('.reviews-carousel_nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        centerMode: true,
+        // centerMode: true,
         centerPadding: '60px',
+        infinite: false,
         prevArrow: "<button type='button' class='slick-prev pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
         nextArrow: "<button type='button' class='slick-next pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
         asNavFor: '.reviews-carousel_for',
-        focusOnSelect: true,
+        // focusOnSelect: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -89,6 +90,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
+        infinite: false,
         asNavFor: '.reviews-carousel_nav',
     });
 
@@ -119,20 +121,20 @@ $(document).ready(function () {
         }, 2500, 'swing');
     });
 
-    $('.video-play-btn').on('click', function () {
-        var video = $(this).siblings('video')[0];
-
-        if (video.paused || video.ended) {
-            $(this).addClass('pause');
-            video.load();
-            video.play();
-            video.removeAttribute('src');
-        } else {
-            $(this).removeClass('pause');
-            video.pause();
-            video.src = "";
-        }
-    });
+    // $('.video-play-btn').on('click', function () {
+    //     var video = $(this).siblings('video')[0];
+    //
+    //     if (video.paused || video.ended) {
+    //         $(this).addClass('pause');
+    //         video.load();
+    //         video.play();
+    //         video.removeAttribute('src');
+    //     } else {
+    //         $(this).removeClass('pause');
+    //         video.pause();
+    //         video.src = "";
+    //     }
+    // });
 
     const observer = lozad(); // lazy loads elements with default selector as '.lozad'
     observer.observe();

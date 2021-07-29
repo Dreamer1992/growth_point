@@ -914,30 +914,30 @@ section {
             outline: none;
           }
 
-          &:not(.slick-center) {
-            transform: scale(0.7);
-            opacity: .5;
-
-            .item-video {
-              .video-play-btn {
-                border: 3px solid #fff;
-
-                &.pause {
-                  &::before {
-                    border-color: #fff;
-                  }
-                }
-
-                &::before {
-                  border-color: transparent transparent transparent #fff;
-                }
-              }
-            }
-
-            .item-name {
-              opacity: 0;
-            }
-          }
+          //&:not(.slick-center) {
+          //  transform: scale(0.7);
+          //  opacity: .5;
+          //
+          //  .item-video {
+          //    .video-play-btn {
+          //      border: 3px solid #fff;
+          //
+          //      &.pause {
+          //        &::before {
+          //          border-color: #fff;
+          //        }
+          //      }
+          //
+          //      &::before {
+          //        border-color: transparent transparent transparent #fff;
+          //      }
+          //    }
+          //  }
+          //
+          //  .item-name {
+          //    opacity: 0;
+          //  }
+          //}
         }
       }
 

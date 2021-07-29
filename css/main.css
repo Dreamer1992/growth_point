@@ -759,23 +759,6 @@ section.twelve .reviews .reviews-carousel_nav .item.slick-slide {
 section.twelve .reviews .reviews-carousel_nav .item.slick-slide:focus-visible {
   outline: none;
 }
-section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-  opacity: .5;
-}
-section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-video .video-play-btn {
-  border: 3px solid #fff;
-}
-section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-video .video-play-btn.pause::before {
-  border-color: #fff;
-}
-section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-video .video-play-btn::before {
-  border-color: transparent transparent transparent #fff;
-}
-section.twelve .reviews .reviews-carousel_nav .item.slick-slide:not(.slick-center) .item-name {
-  opacity: 0;
-}
 section.twelve .reviews .reviews-carousel_for .comment {
   max-width: 76rem;
   margin: 5rem auto 4rem;
