@@ -697,9 +697,9 @@ section {
       position: relative;
       text-align: center;
 
-      img {
+      iframe {
         max-width: 100%;
-        height: auto;
+        //height: auto;
       }
 
       &::before,

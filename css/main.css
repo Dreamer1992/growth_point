@@ -594,9 +594,8 @@ section.nine .acquaintance_video {
   position: relative;
   text-align: center;
 }
-section.nine .acquaintance_video img {
+section.nine .acquaintance_video iframe {
   max-width: 100%;
-  height: auto;
 }
 section.nine .acquaintance_video::before, section.nine .acquaintance_video::after {
   content: '';
