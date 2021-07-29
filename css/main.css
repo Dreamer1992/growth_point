@@ -1326,6 +1326,37 @@ section.seven button.slick-next {
   width: 26px;
 }
 
+.youtube {
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  cursor: pointer;
+}
+
+.youtube .play {
+  background: url("../img/common/youtube-play-btn.png") no-repeat;
+  background-position: 0 -50px;
+  background-size: 100% auto;
+  position: absolute;
+  height: 50px;
+  width: 69px;
+  -webkit-transition: none;
+  transition: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.youtube:hover .play {
+  background-position: 0 0;
+}
+
 @media screen and (max-width: 992px) {
   html {
     font-size: 8px;
