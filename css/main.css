@@ -722,6 +722,7 @@ section.twelve {
 section.twelve .item-video {
   position: relative;
   text-align: center;
+  padding: 0 1rem;
 }
 section.twelve .item-video iframe {
   max-width: 100%;
@@ -1243,6 +1244,10 @@ section.nineteen .form .form-error {
   content: '';
 }
 
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
 .slick-prev img,
 .slick-next img {
   width: 2.3rem;
@@ -1631,6 +1636,17 @@ section.seven button.slick-next {
 @media screen and (max-width: 480px) {
   .header_content .content_title h1 {
     font-size: 3.5rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: .3rem .2rem;
+  }
+  .slick-prev img,
+  .slick-next img {
+    width: 100%;
   }
 }
 

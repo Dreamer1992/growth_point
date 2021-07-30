@@ -70,17 +70,10 @@ $(document).ready(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    arrows: false,
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    arrows: false,
+                    centerMode: false,
                     slidesToShow: 1
                 }
-            }
+            },
         ]
     });
 
@@ -89,7 +82,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        infinite: false,
+        infinite: true,
         asNavFor: '.reviews-carousel_nav',
     });
 
