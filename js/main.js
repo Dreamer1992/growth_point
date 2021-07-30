@@ -60,13 +60,12 @@ $(document).ready(function () {
     $('.reviews-carousel_nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        // centerMode: true,
+        infinite: true,
+        centerMode: true,
         centerPadding: '60px',
-        infinite: false,
         prevArrow: "<button type='button' class='slick-prev pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
         nextArrow: "<button type='button' class='slick-next pull-left'><img width='23' height='33' src='./img/common/arrow_purple.webp'></button>",
         asNavFor: '.reviews-carousel_for',
-        // focusOnSelect: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -105,7 +104,7 @@ $(document).ready(function () {
         }, 2500, 'swing');
     });
 
-    $('a[href^="#nav_"]').on('click', function (e) {
+    $('a[href^="#nav_"], a.sign').on('click', function (e) {
         e.preventDefault();
 
         var top = 170;
@@ -113,28 +112,14 @@ $(document).ready(function () {
         $target = $(target);
 
         if (window.matchMedia("(max-width: 768px)").matches) {
+            target = 50
             $('.navbar-toggler').trigger('click')
         }
 
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - 80
+            'scrollTop': $target.offset().top - 90
         }, 2500, 'swing');
     });
-
-    // $('.video-play-btn').on('click', function () {
-    //     var video = $(this).siblings('video')[0];
-    //
-    //     if (video.paused || video.ended) {
-    //         $(this).addClass('pause');
-    //         video.load();
-    //         video.play();
-    //         video.removeAttribute('src');
-    //     } else {
-    //         $(this).removeClass('pause');
-    //         video.pause();
-    //         video.src = "";
-    //     }
-    // });
 
     const observer = lozad(); // lazy loads elements with default selector as '.lozad'
     observer.observe();
@@ -188,7 +173,10 @@ r(function(){
     var nb_videos = videos.length;
     for (var i=0; i < nb_videos; i++) {
         // Находим постер для видео, зная ID нашего видео
-        videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].id + '/sddefault.jpg)';
+        if (!videos[i].style.backgroundImage) {
+            videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].id + '/sddefault.jpg)';
+        }
+
         // Размещаем над постером кнопку Play, чтобы создать эффект плеера
         var play = document.createElement("div");
         play.setAttribute("class","play");
@@ -196,7 +184,7 @@ r(function(){
         videos[i].onclick = function() {
             // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
             var iframe = document.createElement("iframe");
-            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+            var iframe_url = "https://www.youtube.com/embed/" + this.getAttribute('data-id') + "?autoplay=1&autohide=1";
             if (this.getAttribute("data-params")) iframe_url+='&'+this.getAttribute("data-params");
             iframe.setAttribute("src",iframe_url);
             iframe.setAttribute("frameborder",'0');

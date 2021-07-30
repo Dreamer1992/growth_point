@@ -121,7 +121,7 @@ body {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
 
-      .nav-link {
+      a {
         color: #000;
         text-decoration: underline;
         font-size: 1.8rem;
@@ -307,8 +307,10 @@ section {
           margin-bottom: 3.5rem;
 
           img {
+            position: relative;
             max-width: 100%;
             height: auto;
+            z-index: 1;
 
             &.flower_1,
             &.flower_2,
@@ -395,6 +397,7 @@ section {
           border-radius: 50%;
           width: 100%;
           max-width: 220px;
+          height: auto;
 
           &.border-color-blue {
             border-color: $blue-color;
@@ -697,9 +700,11 @@ section {
       position: relative;
       text-align: center;
 
+      & > div,
       iframe {
         max-width: 100%;
-        //height: auto;
+        height: 52vw !important;
+        max-height: 469px;
       }
 
       &::before,
@@ -750,8 +755,12 @@ section {
         .title {
           font-family: 'Rubik-Bold', sans-serif;
           color: #fff;
-          font-size: 3.2rem;
+          font-size: 2.7rem;
           min-height: 50px;
+          padding: .5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .description {
@@ -913,31 +922,6 @@ section {
           &:focus-visible {
             outline: none;
           }
-
-          //&:not(.slick-center) {
-          //  transform: scale(0.7);
-          //  opacity: .5;
-          //
-          //  .item-video {
-          //    .video-play-btn {
-          //      border: 3px solid #fff;
-          //
-          //      &.pause {
-          //        &::before {
-          //          border-color: #fff;
-          //        }
-          //      }
-          //
-          //      &::before {
-          //        border-color: transparent transparent transparent #fff;
-          //      }
-          //    }
-          //  }
-          //
-          //  .item-name {
-          //    opacity: 0;
-          //  }
-          //}
         }
       }
 
@@ -1571,7 +1555,9 @@ section.seven button.slick-next {
 }
 
 .youtube {
+  max-width: 100%;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -1598,6 +1584,12 @@ section.seven button.slick-next {
 
 .youtube:hover .play {
   background-position: 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  main.main {
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1719,7 +1711,7 @@ section.seven button.slick-next {
   .header .navbar .nav-item {
     margin: 5rem 0 3rem;
 
-    .nav-link {
+    a {
       text-decoration: none;
       text-transform: uppercase;
     }
