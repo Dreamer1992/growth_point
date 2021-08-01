@@ -146,28 +146,51 @@ $(document).ready(function () {
     });
 
     // tabs
-    let offsetTopFirstHeader = $('#accordionQuestions button[data-target="#questionCollapseOne"]').offset().top;
-    let step = $('#accordionQuestions button[data-target="#questionCollapseTwo"]').height();
+    let headers = [
+        {
+            header: '#questionCollapseOne',
+            offsetTop: $('#accordionQuestions button[data-target="#questionCollapseOne"]').offset().top
+        },
+        {
+            header: '#questionCollapseTwo',
+            offsetTop: $('#accordionQuestions button[data-target="#questionCollapseTwo"]').offset().top
+        },
+        {
+            header: '#questionCollapseThree',
+            offsetTop: $('#accordionQuestions button[data-target="#questionCollapseThree"]').offset().top
+        },
+        {
+            header: '#questionCollapseFour',
+            offsetTop: $('#accordionQuestions button[data-target="#questionCollapseFour"]').offset().top
+        },
+        {
+            header: '#questionCollapseFive',
+            offsetTop: $('#accordionQuestions button[data-target="#questionCollapseFive"]').offset().top
+        },
+        {
+            header: '#questionCollapseSix',
+            offsetTop: $('#accordionQuestions button[data-target="#questionCollapseSix"]').offset().top
+        },
+    ];
+
+    let navbarHeight = 110;
+    if (window.matchMedia("(min-width: 992px)").matches) {
+        navbarHeight = 120;
+    }
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        navbarHeight = 80;
+    }
+
     $('#accordionQuestions button').on('click', function (e) {
-        let headers = [
-            '#questionCollapseOne',
-            '#questionCollapseTwo',
-            '#questionCollapseThree',
-            '#questionCollapseFour',
-            '#questionCollapseFive',
-            '#questionCollapseSix'
-        ];
-
         let _this = this;
-
         let target = _this.getAttribute('data-target');
         let isOpen = $(_this).hasClass('collapsed');
 
         if (isOpen) {
-            headers.forEach(function (el, idx) {
-                if (target === el) {
+            headers.forEach(function (el) {
+                if (target === el.header) {
                     $('html, body').stop().animate({
-                        'scrollTop': offsetTopFirstHeader + ((idx + 1) * step)
+                        'scrollTop': Math.floor(el.offsetTop) - navbarHeight
                     }, 500, 'swing');
                 }
             })
@@ -222,14 +245,27 @@ r(function () {
     }
 });
 
-console.log('window.yandex', window.yandex)
-console.log('window.yandex.autofill', window.yandex.autofill)
+let count = 0
+let windowHeight = $(window).height();
+$(window).scroll(function () {
+    if (count === 1) {
+        return
+    }
+    let formOffsetTop = Math.floor($('.nineteen').offset().top);
+    let topY = Math.floor($(this).scrollTop()) + windowHeight - 250
+    if (topY >= formOffsetTop) {
+        if (window.yandex && window.yandex.autofill) {
+            window.yandex.autofill.getProfileData(['name', 'phone'])
+                .then((result) => {
+                    let name = result.lastName + ' ' + result.firstName;
 
-window.yandex.autofill.getProfileData(['name', 'phone'])
-    .then((result) => {
-        console.log(result);
-    }, (error) => {
-        console.log(error);
-    });
+                    $('.form input[name="name"]').val(name);
+                    $('.form input[name="phone"]').val(result.phoneNumber);
 
-// document.addEventListener('touchstart', onTouchStart, {passive: true});
+                    count = 1;
+                }, (error) => {
+                    console.log(error);
+                });
+        }
+    }
+});

@@ -7,12 +7,25 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="preload" href="libs/bootstrap/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  </noscript>
+
   <!-- Reset CSS -->
   <link rel="stylesheet" href="css/reset.css">
   <!-- CSS -->
-  <link rel="stylesheet" href="libs/slick/slick.css">
-  <link rel="stylesheet" href="libs/slick/slick-theme.css">
+  <link rel="preload" href="libs/slick/slick.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="libs/slick/slick.css">
+  </noscript>
+  <link rel="preload" href="libs/slick/slick-theme.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+  </noscript>
   <link rel="stylesheet" href="css/main.css">
 
   <title>Частный детский сад в Ставрополе — Точка Роста. Цена от 908 руб. в день</title>
@@ -2413,7 +2426,7 @@
           <div class="card">
             <div class="card-header" id="questionHeadingOne">
               <h2 class="mb-0">
-                <button class="btn btn-block text-left" type="button" data-toggle="collapse"
+                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#questionCollapseOne" aria-expanded="true" aria-controls="questionCollapseOne">
                   <img class="lozad" data-src="img/section_sixteen/arrow.webp" alt="Точка роста">
                   <span>1. Меня беспокоит чистота и санитарная обстановка в частных садиках.
@@ -2422,7 +2435,7 @@
               </h2>
             </div>
 
-            <div id="questionCollapseOne" class="collapse show" aria-labelledby="questionHeadingOne"
+            <div id="questionCollapseOne" class="collapse" aria-labelledby="questionHeadingOne"
                  data-parent="#accordionQuestions">
               <div class="card-body">
                 В каждом кабинете нашего садика находятся бактерицидные лампы, которые включаются раз в 2 часа для

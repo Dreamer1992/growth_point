@@ -5,7 +5,7 @@
   "scope": "https://chastnyj-detskij-sad-stavropol.ru/",
   "yandex": {
     "manifest_version": 1,
-    "app_version": "1.0.0",
+    "app_version": "1.2.1",
     "cache": {
       "resources": [
         "/css/reset.css",
@@ -13,14 +13,22 @@
         "/libs/slick/slick-theme.css",
         "/css/main.css",
         "/libs/bootstrap/css/bootstrap.min.css",
-
         "/js/jQuery-1.11.0.min.js",
         "/libs/bootstrap/js/bootstrap.min.js",
         "/libs/slick/slick.min.js",
         "/js/main.js",
-
+        "/img/header/phone.webp",
+        "/img/header/header_children.webp",
+        "/img/header/header-bg.webp",
+        "/img/header/bullet_1.webp",
+        "/img/header/bullet_2.webp",
+        "/img/header/bullet_3.webp",
         "/img/common/logo.webp",
         "/img/common/logo_big.webp",
+        "/img/common/section_bg_2.webp",
+        "/img/common/arrow_purple.webp",
+        "/img/common/arrow_orange.webp",
+        "/img/common/arrow_blue.webp",
         "/img/header/bullet_1.webp",
         "/img/header/bullet_2.webp",
         "/img/header/bullet_3.webp",
@@ -30,6 +38,8 @@
         "/img/common/toys/plane.webp",
         "/img/common/toys/horse.png",
         "/img/common/toys/train.png",
+        "/img/common/toys/gun.png",
+        "/img/common/toys/car.png",
         "/img/section_two/creates.webp",
         "/img/section_two/eats.webp",
         "/img/section_two/visits.webp",
@@ -44,6 +54,7 @@
         "/img/section_free/carousel_img_8.webp",
         "/img/section_free/carousel_img_9.webp",
         "/img/section_free/carousel_img_10.webp",
+        "/img/section_six/children.webp",
         "/img/section_eight/benefit_1.webp",
         "/img/section_eight/benefit_2.webp",
         "/img/section_eight/benefit_3.webp",
@@ -70,6 +81,16 @@
         "/img/section_ten/right_carousel_img_10.webp",
         "/img/section_ten/right_carousel_img_11.webp",
         "/img/section_eleven/Anna.webp",
+        "/img/section_twelve/1.webp",
+        "/img/section_twelve/2.webp",
+        "/img/section_twelve/3.webp",
+        "/img/section_twelve/4.webp",
+        "/img/section_twelve/5.webp",
+        "/img/section_twelve/6.webp",
+        "/img/section_twelve/7.webp",
+        "/img/section_twelve/8.webp",
+        "/img/section_thirteen/children.webp",
+        "/img/section_thirteen/children_table.webp",
         "/img/section_fourteen/pic.webp",
         "/img/section_fifteen/girls.webp",
         "/img/section_fifteen/1.webp",
@@ -77,12 +98,14 @@
         "/img/section_fifteen/3.webp",
         "/img/section_fifteen/4.webp",
         "/img/section_sixteen/arrow.webp",
+        "/img/section_sixteen/children.webp",
         "/img/section_eighteen/Marina.webp",
         "/img/section_eighteen/Nikol.webp",
         "/img/section_eighteen/instagram.webp",
         "/img/section_eighteen/tg.webp",
         "/img/section_eighteen/ws.webp"
-      ]
+      ],
+      "ignored_query_params": []
     }
   }
 }
