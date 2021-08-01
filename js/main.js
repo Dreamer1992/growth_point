@@ -222,4 +222,14 @@ r(function () {
     }
 });
 
+console.log('window.yandex', window.yandex)
+console.log('window.yandex.autofill', window.yandex.autofill)
+
+window.yandex.autofill.getProfileData(['name', 'phone'])
+    .then((result) => {
+        console.log(result);
+    }, (error) => {
+        console.log(error);
+    });
+
 // document.addEventListener('touchstart', onTouchStart, {passive: true});
