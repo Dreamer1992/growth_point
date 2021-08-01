@@ -100,8 +100,8 @@ $(document).ready(function () {
     $('a[href^="#nav_"], a.sign').on('click', function (e) {
         e.preventDefault();
 
-        var top = 170;
-        var target = this.hash;
+        let top = 170;
+        let target = this.hash;
         $target = $(target);
 
         if (window.matchMedia("(max-width: 768px)").matches) {
@@ -120,8 +120,8 @@ $(document).ready(function () {
     $('.form').on('submit', function (e) {
         e.preventDefault();
 
-        var data = $('.form').serializeArray();
-        var isEmpty = false
+        let data = $('.form').serializeArray();
+        let isEmpty = false
 
         $(data).each(function (idx, el) {
             if (!el.value) {
@@ -144,27 +144,59 @@ $(document).ready(function () {
         });
 
     });
+
+    // tabs
+    let offsetTopFirstHeader = $('#accordionQuestions button[data-target="#questionCollapseOne"]').offset().top;
+    let step = $('#accordionQuestions button[data-target="#questionCollapseTwo"]').height();
+    $('#accordionQuestions button').on('click', function (e) {
+        let headers = [
+            '#questionCollapseOne',
+            '#questionCollapseTwo',
+            '#questionCollapseThree',
+            '#questionCollapseFour',
+            '#questionCollapseFive',
+            '#questionCollapseSix'
+        ];
+
+        let _this = this;
+
+        let target = _this.getAttribute('data-target');
+        let isOpen = $(_this).hasClass('collapsed');
+
+        if (isOpen) {
+            headers.forEach(function (el, idx) {
+                if (target === el) {
+                    $('html, body').stop().animate({
+                        'scrollTop': offsetTopFirstHeader + ((idx + 1) * step)
+                    }, 500, 'swing');
+                }
+            })
+        }
+    });
 });
 
 // Youtube
-function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
-r(function(){
+function r(f) {
+    /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f()
+}
+
+r(function () {
     if (!document.getElementsByClassName) {
         // Поддержка IE8
-        var getElementsByClassName = function(node, classname) {
+        var getElementsByClassName = function (node, classname) {
             var a = [];
-            var re = new RegExp('(^| )'+classname+'( |$)');
+            var re = new RegExp('(^| )' + classname + '( |$)');
             var els = node.getElementsByTagName("*");
-            for(var i=0,j=els.length; i < j; i++)
-                if(re.test(els[i].className))a.push(els[i]);
+            for (var i = 0, j = els.length; i < j; i++)
+                if (re.test(els[i].className)) a.push(els[i]);
             return a;
         }
-        var videos = getElementsByClassName(document.body,"youtube");
+        var videos = getElementsByClassName(document.body, "youtube");
     } else {
         var videos = document.getElementsByClassName("youtube");
     }
     var nb_videos = videos.length;
-    for (var i=0; i < nb_videos; i++) {
+    for (var i = 0; i < nb_videos; i++) {
         // Находим постер для видео, зная ID нашего видео
         if (!videos[i].style.backgroundImage) {
             videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].id + '/sddefault.jpg)';
@@ -172,17 +204,17 @@ r(function(){
 
         // Размещаем над постером кнопку Play, чтобы создать эффект плеера
         var play = document.createElement("div");
-        play.setAttribute("class","play");
+        play.setAttribute("class", "play");
         videos[i].appendChild(play);
-        videos[i].onclick = function() {
+        videos[i].onclick = function () {
             // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
             var iframe = document.createElement("iframe");
             var iframe_url = "https://www.youtube.com/embed/" + this.getAttribute('data-id') + "?autoplay=1&autohide=1";
-            if (this.getAttribute("data-params")) iframe_url+='&'+this.getAttribute("data-params");
-            iframe.setAttribute("src",iframe_url);
-            iframe.setAttribute("frameborder",'0');
+            if (this.getAttribute("data-params")) iframe_url += '&' + this.getAttribute("data-params");
+            iframe.setAttribute("src", iframe_url);
+            iframe.setAttribute("frameborder", '0');
             // Высота и ширина iFrame будет как у элемента-родителя
-            iframe.style.width  = this.style.width;
+            iframe.style.width = this.style.width;
             iframe.style.height = this.style.height;
             // Заменяем начальное изображение (постер) на iFrame
             this.parentNode.replaceChild(iframe, this);

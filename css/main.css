@@ -609,7 +609,7 @@ section.nine .acquaintance_video::before, section.nine .acquaintance_video::afte
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-size: 13vw;
+  background-size: 100%;
   background-repeat: no-repeat;
   width: 15vw;
   max-width: 26rem;
@@ -812,7 +812,7 @@ section.thirteen .table-top::after {
   right: -5.8vw;
   bottom: 7vw;
   background-image: url(../img/section_thirteen/children_table.webp);
-  background-size: 7vw;
+  background-size: 100%;
   background-repeat: no-repeat;
   width: 8vw;
   max-width: 15.3rem;
@@ -827,7 +827,7 @@ section.thirteen .table-bottom table {
 section.thirteen .table-bottom table::before, section.thirteen .table-bottom table::after {
   content: '';
   position: absolute;
-  background-size: 13vw;
+  background-size: 100%;
   background-repeat: no-repeat;
   bottom: -16.85rem;
   width: 15vw;
@@ -856,7 +856,7 @@ section.thirteen .table-bottom::after {
   width: 15.5vw;
   height: 5.7vw;
   background-repeat: no-repeat;
-  background-size: 13vw;
+  background-size: 100%;
 }
 section.thirteen .table-bottom .old-price {
   color: #838383;
@@ -917,7 +917,7 @@ section.fifteen .bullet {
 section.fifteen .bullet::before, section.fifteen .bullet::after {
   content: '';
   position: absolute;
-  background-size: 13vw;
+  background-size: 100%;
   background-repeat: no-repeat;
   bottom: -16.85rem;
   width: 15vw;
@@ -1062,7 +1062,7 @@ section.seventeen .table-title::after {
   content: '';
   position: absolute;
   background-image: url("../img/common/toys/car.png");
-  background-size: 13vw;
+  background-size: 100%;
   background-repeat: no-repeat;
   bottom: -16.85rem;
   right: -16vw;
@@ -1077,7 +1077,7 @@ section.seventeen table {
 section.seventeen table::before, section.seventeen table::after {
   content: '';
   position: absolute;
-  background-size: 13vw;
+  background-size: 100%;
   background-repeat: no-repeat;
   right: -16vw;
   width: 15vw;
@@ -1366,6 +1366,11 @@ section.seven button.slick-next {
 @media screen and (min-width: 768px) {
   main.main {
     overflow: hidden;
+  }
+}
+@media screen and (min-width: 2000px) {
+  section.thirteen .table-top::after {
+    right: -120px;
   }
 }
 @media screen and (max-width: 992px) {
