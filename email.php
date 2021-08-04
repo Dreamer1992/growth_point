@@ -1,7 +1,7 @@
 <?php
-$to = "<dobro@anotr.ru>";
+$to = "<test@yandex.ru>";
 
-$subject = "Точка роста";
+$subject = "Заголовок";
 
 $headers = "Content-type: text/html; charset=UTF-8 \r\n";
 
